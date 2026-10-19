@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Guía Ciclismo · Asesoría & Entrega</title>
-  <meta name="description" content="Manual interactivo de venta, tallas, bodega y entrega de bicicletas al estilo Decathlon.">
+  <meta name="description" content="Manual visual e interactivo de venta, tallas, bodega y entrega de bicicletas al estilo Decathlon.">
   <meta name="theme-color" content="#3643BA">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,20 +18,20 @@
   <style>
     :root {
       --primary: #3643BA;
-      --primary-dark: #252E8A;
+      --primary-dark: #232C85;
       --primary-light: #EEF0FF;
       --accent: #00C853;
       --accent-soft: #E8F8EE;
       --warning: #FF8F00;
       --warning-soft: #FFF8E1;
       --danger: #D32F2F;
-      --bg: #F4F6FB;
+      --bg: #F3F5FB;
       --card: #FFFFFF;
       --text: #141726;
       --text-muted: #5E6478;
       --border: #E2E6F0;
-      --radius: 18px;
-      --shadow: 0 6px 24px rgba(20, 23, 38, 0.06);
+      --radius: 20px;
+      --shadow: 0 8px 26px rgba(20, 23, 38, 0.06);
     }
 
     * {
@@ -46,7 +46,7 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.5;
-      padding-bottom: 96px;
+      padding-bottom: 100px;
       overflow-x: hidden;
     }
 
@@ -54,7 +54,7 @@
     .app-header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: #fff;
-      padding: 18px 16px 16px;
+      padding: 16px 16px 14px;
       position: sticky;
       top: 0;
       z-index: 50;
@@ -62,7 +62,7 @@
     }
 
     .header-top {
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -79,9 +79,8 @@
     .brand-logo {
       width: 42px;
       height: 42px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.16);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -98,61 +97,50 @@
     }
 
     .brand-subtitle {
-      font-size: 0.76rem;
-      opacity: 0.85;
+      font-size: 0.75rem;
+      opacity: 0.86;
       font-weight: 500;
       margin-top: 2px;
     }
 
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
     .btn-install {
       background: #00E676;
-      color: #092214;
+      color: #072312;
       border: none;
       padding: 8px 13px;
       border-radius: 999px;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 800;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       box-shadow: 0 4px 12px rgba(0, 230, 118, 0.35);
-      transition: transform 0.15s ease;
       white-space: nowrap;
     }
 
-    .btn-install:active {
-      transform: scale(0.95);
-    }
-
-    /* SEARCH & QUICK JUMP BAR */
+    /* SEARCH BAR */
     .search-wrap {
-      max-width: 780px;
+      max-width: 800px;
       margin: 12px auto 0;
       position: relative;
     }
 
     .search-input {
       width: 100%;
-      padding: 11px 38px 11px 38px;
+      padding: 10px 38px;
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.22);
       background: rgba(255, 255, 255, 0.14);
       color: #fff;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-family: inherit;
       outline: none;
       transition: all 0.2s;
     }
 
     .search-input::placeholder {
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255, 255, 255, 0.78);
     }
 
     .search-input:focus {
@@ -172,7 +160,6 @@
       transform: translateY(-50%);
       pointer-events: none;
       font-size: 0.95rem;
-      opacity: 0.85;
     }
 
     .search-clear {
@@ -180,7 +167,7 @@
       right: 10px;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0,0,0,0.2);
+      background: rgba(0,0,0,0.25);
       color: #fff;
       border: none;
       width: 22px;
@@ -195,18 +182,18 @@
 
     /* MAIN CONTAINER */
     .container {
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 16px;
     }
 
-    /* VIEW MODE SWITCHER (Paso a paso vs Ver Todo) */
+    /* TOOLBAR */
     .toolbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       background: var(--card);
       padding: 10px 14px;
       border-radius: 14px;
@@ -225,7 +212,7 @@
       background: var(--primary-light);
       color: var(--primary);
       font-weight: 800;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       padding: 5px 10px;
       border-radius: 8px;
       white-space: nowrap;
@@ -253,8 +240,8 @@
       border: 1px solid rgba(54, 67, 186, 0.2);
       padding: 7px 11px;
       border-radius: 10px;
-      font-size: 0.76rem;
-      font-weight: 700;
+      font-size: 0.75rem;
+      font-weight: 800;
       cursor: pointer;
       white-space: nowrap;
     }
@@ -264,7 +251,17 @@
       color: #fff;
     }
 
-    /* QUICK ACCESS PILLS */
+    .reset-btn {
+      background: none;
+      border: none;
+      color: var(--danger);
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    /* QUICK PILLS */
     .quick-pills {
       display: flex;
       gap: 8px;
@@ -273,9 +270,7 @@
       margin-bottom: 14px;
       scrollbar-width: none;
     }
-    .quick-pills::-webkit-scrollbar {
-      display: none;
-    }
+    .quick-pills::-webkit-scrollbar { display: none; }
 
     .pill {
       background: var(--card);
@@ -283,13 +278,10 @@
       color: var(--text-muted);
       padding: 8px 13px;
       border-radius: 999px;
-      font-size: 0.8rem;
+      font-size: 0.79rem;
       font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
       transition: all 0.2s;
     }
 
@@ -305,11 +297,7 @@
       display: none;
       animation: fadeIn 0.22s ease;
     }
-
-    .step-section.active {
-      display: block;
-    }
-
+    .step-section.active { display: block; }
     body.view-all .step-section {
       display: block;
       margin-bottom: 28px;
@@ -323,43 +311,41 @@
     .section-banner {
       background: var(--card);
       border-radius: var(--radius);
-      padding: 18px;
+      padding: 16px 18px;
       margin-bottom: 14px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 14px;
     }
 
     .step-badge {
       background: var(--primary);
       color: #fff;
-      width: 38px;
-      height: 38px;
-      border-radius: 11px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 1rem;
+      font-size: 1.05rem;
       flex-shrink: 0;
     }
 
     .section-banner h2 {
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      color: var(--text);
     }
 
     .section-banner p {
-      font-size: 0.86rem;
+      font-size: 0.83rem;
       color: var(--text-muted);
-      margin-top: 3px;
+      margin-top: 2px;
     }
 
-    /* CARDS & GRIDS */
     .card {
       background: var(--card);
       border-radius: var(--radius);
@@ -369,93 +355,247 @@
       box-shadow: var(--shadow);
     }
 
-    .card-title {
-      font-size: 0.98rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      display: flex;
+    .tap-hint {
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      gap: 6px;
+      background: #EEF2FF;
+      color: var(--primary);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 99px;
+      margin-bottom: 12px;
     }
 
-    .bike-grid {
+    /* =====================================================
+       VISUAL ICON SELECTOR GRID (TIPOS DE BICIS / HERRAMIENTAS / BODEGA)
+       ===================================================== */
+    .icon-grid-5 {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
     }
 
-    @media (min-width: 580px) {
-      .bike-grid {
-        grid-template-columns: repeat(2, 1fr);
+    @media (min-width: 560px) {
+      .icon-grid-5 {
+        grid-template-columns: repeat(5, 1fr);
       }
     }
 
-    .bike-card {
-      border: 1.5px solid var(--border);
-      border-radius: 15px;
-      padding: 15px;
-      background: #fff;
-      transition: all 0.2s;
+    .icon-tile {
+      background: #F8FAFF;
+      border: 2px solid var(--border);
+      border-radius: 18px;
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
-      overflow: hidden;
+      user-select: none;
     }
 
-    .bike-card:hover {
-      border-color: var(--primary);
+    .icon-tile:hover {
+      border-color: #9BA5E8;
       transform: translateY(-2px);
     }
 
-    .bike-head {
+    .icon-tile.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 10px 22px rgba(54, 67, 186, 0.28);
+      transform: translateY(-3px);
+    }
+
+    .icon-tile svg {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .icon-tile.active svg {
+      transform: scale(1.08);
+    }
+
+    .icon-tile-title {
+      font-size: 0.84rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .icon-tile-sub {
+      font-size: 0.7rem;
+      font-weight: 600;
+      opacity: 0.75;
+      margin-top: 3px;
+    }
+
+    /* DETAIL REVEAL PANEL */
+    .visual-detail-box {
+      background: linear-gradient(145deg, #FFFFFF 0%, #F5F7FF 100%);
+      border: 2px solid var(--primary);
+      border-radius: 18px;
+      padding: 18px;
+      animation: popIn 0.22s ease;
+      position: relative;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .detail-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
-    .bike-icon {
-      font-size: 1.5rem;
-      background: var(--primary-light);
-      width: 42px;
-      height: 42px;
-      border-radius: 11px;
+    .detail-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .detail-big-badge {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 99px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(54, 67, 186, 0.25);
+    }
+
+    .detail-name {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .detail-desc {
+      font-size: 0.92rem;
+      color: #2E3348;
+      margin-bottom: 12px;
+    }
+
+    .detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .detail-chip {
+      background: #fff;
+      border: 1px solid #D5DCF2;
+      padding: 6px 11px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    /* 3-COLUMN VISUAL TOOL / ACTION GRID */
+    .icon-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .icon-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 540px) {
+      .icon-grid-6 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .step-number-pill {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #E2E7F8;
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 900;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .brand-tag {
-      background: var(--primary);
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 800;
-      padding: 4px 9px;
-      border-radius: 99px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-
-    .bike-card h3 {
-      font-size: 0.96rem;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .bike-card p {
-      font-size: 0.84rem;
-      color: var(--text-muted);
-    }
-
-    .bike-question {
-      margin-top: 10px;
-      padding-top: 9px;
-      border-top: 1px dashed var(--border);
-      font-size: 0.78rem;
+    .icon-tile.active .step-number-pill {
+      background: #fff;
       color: var(--primary);
-      font-weight: 600;
     }
 
-    /* SIZE CALCULATOR */
+    .done-dot {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #E8ECF7;
+      color: transparent;
+      font-size: 0.72rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid #C8D0E7;
+    }
+
+    .icon-tile.checked-tile .done-dot {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .btn-mark-step {
+      margin-top: 12px;
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 2px solid var(--accent);
+      background: var(--accent-soft);
+      color: #075E2B;
+      font-weight: 800;
+      font-size: 0.86rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.15s;
+    }
+
+    .btn-mark-step.is-done {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* SIZE CALCULATOR (10/10 KEPT INTACT!) */
     .calc-tabs {
       display: flex;
       background: #EDF0F7;
@@ -557,8 +697,7 @@
       border-left: 5px solid var(--primary);
       border-radius: 14px;
       padding: 15px 16px;
-      margin: 12px 0;
-      position: relative;
+      margin: 14px 0;
     }
 
     .speech-label {
@@ -575,7 +714,7 @@
 
     .speech-text {
       font-size: 0.96rem;
-      font-weight: 700;
+      font-weight: 800;
       color: #1E255E;
       font-style: italic;
     }
@@ -591,79 +730,6 @@
       cursor: pointer;
     }
 
-    /* INTERACTIVE CHECKLIST */
-    .checklist {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .check-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 13px 14px;
-      border-radius: 13px;
-      border: 1.5px solid var(--border);
-      background: #fff;
-      cursor: pointer;
-      transition: all 0.18s ease;
-      user-select: none;
-    }
-
-    .check-item:active {
-      transform: scale(0.99);
-    }
-
-    .check-item.checked {
-      background: var(--accent-soft);
-      border-color: var(--accent);
-    }
-
-    .check-box {
-      width: 24px;
-      height: 24px;
-      border-radius: 7px;
-      border: 2px solid #B6BFD6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-      font-size: 0.85rem;
-      color: transparent;
-      background: #fff;
-      transition: all 0.18s;
-    }
-
-    .check-item.checked .check-box {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-    }
-
-    .check-content {
-      flex: 1;
-    }
-
-    .check-title {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .check-item.checked .check-title {
-      text-decoration: line-through;
-      color: #2E6B47;
-    }
-
-    .check-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-
-    /* ALERT / NOTE BOX */
     .alert-box {
       background: var(--warning-soft);
       border: 1px solid #FFE082;
@@ -673,10 +739,6 @@
       font-size: 0.83rem;
       color: #5D4037;
       margin-top: 12px;
-    }
-
-    .alert-box strong {
-      color: #3E2723;
     }
 
     /* BOTTOM NAVIGATION */
@@ -710,21 +772,15 @@
       font-size: 0.68rem;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.18s;
       font-family: inherit;
     }
 
-    .nav-btn .nav-icon {
-      font-size: 1.2rem;
-      line-height: 1;
-    }
-
+    .nav-btn .nav-icon { font-size: 1.2rem; line-height: 1; }
     .nav-btn.active {
       color: var(--primary);
       background: var(--primary-light);
     }
 
-    /* STEP FOOTER NEXT/PREV */
     .step-nav-footer {
       display: flex;
       justify-content: space-between;
@@ -766,11 +822,7 @@
       justify-content: center;
       padding: 16px;
     }
-
-    .modal-backdrop.open {
-      display: flex;
-    }
-
+    .modal-backdrop.open { display: flex; }
     .modal-sheet {
       background: #fff;
       width: 100%;
@@ -778,26 +830,13 @@
       border-radius: 22px;
       padding: 22px 20px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-      animation: slideUp 0.25s ease;
     }
-
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
     .modal-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 14px;
     }
-
-    .modal-header h3 {
-      font-size: 1.1rem;
-      font-weight: 800;
-    }
-
     .btn-close-modal {
       background: #F0F2F8;
       border: none;
@@ -807,7 +846,6 @@
       font-weight: 800;
       cursor: pointer;
     }
-
     .os-card {
       background: #F7F8FC;
       border: 1px solid var(--border);
@@ -815,35 +853,8 @@
       padding: 14px;
       margin-bottom: 12px;
     }
-
-    .os-card h4 {
-      font-size: 0.92rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .os-card ol {
-      padding-left: 18px;
-      font-size: 0.84rem;
-      color: var(--text-muted);
-    }
-
-    .os-card ol li {
-      margin-bottom: 5px;
-    }
-
-    .reset-btn {
-      background: none;
-      border: none;
-      color: var(--danger);
-      font-size: 0.78rem;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: underline;
-    }
+    .os-card h4 { font-size: 0.92rem; font-weight: 800; margin-bottom: 8px; }
+    .os-card ol { padding-left: 18px; font-size: 0.84rem; color: var(--text-muted); }
   </style>
 </head>
 <body>
@@ -854,25 +865,22 @@
       <div class="brand">
         <div class="brand-logo" aria-hidden="true">🚲</div>
         <div>
-          <div class="brand-title">Manual Bicicletas Decathlon</div>
-          <div class="brand-subtitle">Guía rápida de Venta, Bodega y Entrega</div>
+          <div class="brand-title">Manual Visual Bicicletas</div>
+          <div class="brand-subtitle">Toca cada ícono para ver el paso a paso</div>
         </div>
       </div>
-      <div class="header-actions">
-        <button class="btn-install" id="btnInstallApp" onclick="handleInstallClick()">
-          📲 Instalar en Celular
-        </button>
-      </div>
+      <button class="btn-install" onclick="handleInstallClick()">
+        📲 Instalar App
+      </button>
     </div>
 
-    <!-- BUSCADOR INSTANTÁNEO -->
     <div class="search-wrap">
       <span class="search-icon">🔍</span>
       <input
         type="search"
         id="searchInput"
         class="search-input"
-        placeholder="Buscar paso, Rockrider, talla, rin, Allen, Medallia..."
+        placeholder="Buscar Rockrider, Van Rysel, talla, Allen, Medallia..."
         oninput="filterContent(this.value)"
       >
       <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
@@ -880,102 +888,129 @@
   </header>
 
   <main class="container">
-    <!-- BARRA DE PROGRESO Y MODO VISTA -->
-    <div class="toolbar">
-      <div class="progress-info">
-        <span class="progress-ring" id="progressCounter">0 / 12 listos</span>
-        <div class="progress-bar-bg">
-          <div class="progress-bar-fill" id="progressBarFill"></div>
-        </div>
-      </div>
-      <button class="reset-btn" onclick="resetChecks()" title="Reiniciar lista para nuevo cliente">Reiniciar</button>
-      <button class="mode-toggle" id="btnViewAll" onclick="toggleViewAll()">
-        📖 Ver Todo
-      </button>
-    </div>
-
-    <!-- PÍLDORAS DE ACCESO RÁPIDO -->
+    <!-- PÍLDORAS DE ACCESO RÁPIDO + MODO VER TODO -->
     <div class="quick-pills" id="quickPills">
-      <button class="pill active" onclick="goToStep(1)">1. Tipos & Marcas</button>
-      <button class="pill" onclick="goToStep(2)">2. Calculadora Tallas</button>
+      <button class="pill active" onclick="goToStep(1)">1. Tipos de Bicis</button>
+      <button class="pill" onclick="goToStep(2)">2. Tabla de Tallas</button>
       <button class="pill" onclick="goToStep(3)">3. Bajar de Bodega</button>
-      <button class="pill" onclick="goToStep(4)">4. Asesoría & Ajustes</button>
+      <button class="pill" onclick="goToStep(4)">4. Asesoría & Llave Allen</button>
       <button class="pill" onclick="goToStep(5)">5. Gana Medallia ⭐</button>
+      <button class="mode-toggle" id="btnViewAll" onclick="toggleViewAll()">📖 Ver Todo</button>
     </div>
 
-    <!-- ==========================================
-         PASO 1: IDENTIFICA EL TIPO DE BICICLETA
-         ========================================== -->
+    <!-- ==========================================================
+         PASO 1: TIPOS DE BICICLETAS POR ÍCONOS INTERACTIVOS
+         ========================================================== -->
     <section class="step-section active" id="step-1" data-keywords="identifica tipo bicicleta venta cube montaña mtb rockrider ruta carretera van rysel urbanas hibridas elops riverside plegables tilt niños infantil">
       <div class="section-banner">
         <div class="step-badge">1</div>
         <div>
           <h2>Identifica el Tipo de Bicicleta</h2>
-          <p>Descubre qué quiere el cliente (apóyate en el <strong>CUBE</strong>) y ubica rápido cada línea y marca propia.</p>
+          <p>Apóyate en el <strong>CUBE</strong>. Toca el ícono del tipo de ciclismo para ver la marca y sus nombres.</p>
         </div>
       </div>
 
-      <div class="bike-grid">
-        <div class="bike-card">
-          <div class="bike-head">
-            <div class="bike-icon">⛰️</div>
-            <span class="brand-tag">Rockrider</span>
+      <div class="card">
+        <div class="tap-hint">👆 Toca un ícono para ver el nombre de la bicicleta y su uso</div>
+
+        <!-- GRILLA DE 5 ÍCONOS VISUALES DE BICICLETAS -->
+        <div class="icon-grid-5" id="bikeTypeGrid">
+          <!-- MTB -->
+          <div class="icon-tile active" onclick="selectBikeType('mtb', this)">
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M8 48L24 22L36 38L44 26L58 48H8Z" fill="currentColor" opacity="0.18"/>
+              <circle cx="18" cy="46" r="9" stroke="currentColor" stroke-width="3.5"/>
+              <circle cx="46" cy="46" r="9" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M18 46L29 30H43L32 46H18Z" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
+              <path d="M41 25L46 46M26 26H33" stroke="#00E676" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <div class="icon-tile-title">Montaña (MTB)</div>
+            <div class="icon-tile-sub">Toca para ver</div>
           </div>
-          <h3>Bicicletas de Montaña (MTB)</h3>
-          <p>Diseñadas para terrenos difíciles, trocha y travesías todoterreno.</p>
-          <div class="bike-question">💡 Ideal si el cliente busca aventura, tierra o montaña.</div>
+
+          <!-- RUTA -->
+          <div class="icon-tile" onclick="selectBikeType('ruta', this)">
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="17" cy="44" r="10" stroke="currentColor" stroke-width="3.2"/>
+              <circle cx="47" cy="44" r="10" stroke="currentColor" stroke-width="3.2"/>
+              <path d="M17 44L28 28H44L32 44H17Z" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
+              <path d="M44 28L47 44M41 24H48C50 24 51 27 49 29" stroke="#00E676" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M25 25H31" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+            <div class="icon-tile-title">Ruta / Carretera</div>
+            <div class="icon-tile-sub">Toca para ver</div>
+          </div>
+
+          <!-- URBANA -->
+          <div class="icon-tile" onclick="selectBikeType('urbana', this)">
+            <svg viewBox="0 0 64 64" fill="none">
+              <rect x="10" y="14" width="14" height="22" rx="2" fill="currentColor" opacity="0.16"/>
+              <rect x="28" y="10" width="16" height="26" rx="2" fill="currentColor" opacity="0.16"/>
+              <circle cx="18" cy="45" r="9" stroke="currentColor" stroke-width="3.2"/>
+              <circle cx="46" cy="45" r="9" stroke="currentColor" stroke-width="3.2"/>
+              <path d="M18 45L27 32L34 43L44 29" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M42 24L46 45M24 29H30" stroke="#00E676" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+            <div class="icon-tile-title">Urbana / Híbrida</div>
+            <div class="icon-tile-sub">Toca para ver</div>
+          </div>
+
+          <!-- PLEGABLE -->
+          <div class="icon-tile" onclick="selectBikeType('plegable', this)">
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="19" cy="46" r="7" stroke="currentColor" stroke-width="3.2"/>
+              <circle cx="45" cy="46" r="7" stroke="currentColor" stroke-width="3.2"/>
+              <path d="M19 46L32 38L45 46" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M27 24L25 41M41 20L45 46" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+              <circle cx="32" cy="38" r="3.5" fill="#00E676"/>
+              <path d="M23 24H30M38 20H44" stroke="#00E676" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+            <div class="icon-tile-title">Plegables</div>
+            <div class="icon-tile-sub">Toca para ver</div>
+          </div>
+
+          <!-- NIÑOS -->
+          <div class="icon-tile" onclick="selectBikeType('ninos', this)">
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="20" cy="45" r="8" stroke="currentColor" stroke-width="3.2"/>
+              <circle cx="44" cy="45" r="8" stroke="currentColor" stroke-width="3.2"/>
+              <circle cx="11" cy="49" r="3.5" stroke="#00E676" stroke-width="2.5"/>
+              <path d="M20 45L30 33H41L44 45" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M27 29H33M39 27H44" stroke="#00E676" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+            <div class="icon-tile-title">Para Niños</div>
+            <div class="icon-tile-sub">Toca para ver</div>
+          </div>
         </div>
 
-        <div class="bike-card">
-          <div class="bike-head">
-            <div class="bike-icon">🛣️</div>
-            <span class="brand-tag">Van Rysel</span>
+        <!-- TARJETA QUE SE ACTUALIZA AL HACER CLIC EN EL ÍCONO -->
+        <div class="visual-detail-box" id="bikeDetailBox">
+          <div class="detail-header">
+            <div class="detail-title-group">
+              <span class="detail-big-badge" id="bikeBrandBadge">Marca: ROCKRIDER</span>
+              <h3 class="detail-name" id="bikeTitle">Bicicletas de Montaña (MTB)</h3>
+            </div>
           </div>
-          <h3>Bicicletas de Ruta / Carretera</h3>
-          <p>Creadas para velocidad, aerodinámica y rendimiento en asfalto.</p>
-          <div class="bike-question">💡 Ideal para entrenar en pavimento y largas distancias.</div>
-        </div>
-
-        <div class="bike-card">
-          <div class="bike-head">
-            <div class="bike-icon">🏙️</div>
-            <span class="brand-tag">Elops / Riverside</span>
+          <p class="detail-desc" id="bikeDesc">
+            Diseñadas para terrenos difíciles y travesías todoterreno, principalmente bajo nuestra marca propia <strong>Rockrider</strong>.
+          </p>
+          <div class="detail-tags" id="bikeTags">
+            <span class="detail-chip">🏷️ Marca: Rockrider</span>
+            <span class="detail-chip">⛰️ Uso: Trocha y terrenos difíciles</span>
+            <span class="detail-chip">📏 Tallas: S, M, L, XL</span>
           </div>
-          <h3>Urbanas e Híbridas</h3>
-          <p>Pensadas para el transporte diario, comodidad y movilidad en la ciudad o ciclorrutas.</p>
-          <div class="bike-question">💡 Ideal para ir al trabajo, universidad o paseos mixtos.</div>
-        </div>
-
-        <div class="bike-card">
-          <div class="bike-head">
-            <div class="bike-icon">🚈</div>
-            <span class="brand-tag">Línea Tilt</span>
-          </div>
-          <h3>Bicicletas Plegables</h3>
-          <p>Compactas y prácticas para facilitar su transporte en transporte público y almacenamiento en casa.</p>
-          <div class="bike-question">💡 Ideal si tiene poco espacio en apartamento o combina con bus/metro.</div>
-        </div>
-
-        <div class="bike-card">
-          <div class="bike-head">
-            <div class="bike-icon">🧒</div>
-            <span class="brand-tag">Por Tipo de Rin</span>
-          </div>
-          <h3>Bicicletas para Niños</h3>
-          <p>Se eligen según la estatura y etapa de aprendizaje del niño (Rin 12 a Rin 26).</p>
-          <div class="bike-question">💡 Pasa al Paso 2 para usar la guía de Rin Infantil.</div>
         </div>
       </div>
 
       <div class="step-nav-footer">
         <span></span>
-        <button class="btn-step-nav primary" onclick="goToStep(2)">Siguiente: Verificar Talla →</button>
+        <button class="btn-step-nav primary" onclick="goToStep(2)">Siguiente: Tabla de Tallas →</button>
       </div>
     </section>
 
-    <!-- ==========================================
-         PASO 2: VERIFICAR LA TALLA DE LA BICICLETA
-         ========================================== -->
+    <!-- ==========================================================
+         PASO 2: TABLA DE TALLAS (10/10 CONSERVADA)
+         ========================================================== -->
     <section class="step-section" id="step-2" data-keywords="talla verificar estatura altura adulto niños infantil rin 12 14 16 20 24 26 small medium large xl">
       <div class="section-banner">
         <div class="step-badge">2</div>
@@ -1038,14 +1073,14 @@
           </table>
 
           <div class="alert-box">
-            ⚠️ <strong>Nota importante:</strong> Esta tabla sirve como referencia inicial para bicicletas MTB, pero <strong>no reemplaza la guía del modelo específico</strong>. Si está entre dos tallas, revisa siempre la geometría del modelo.
+            ⚠️ <strong>Nota importante:</strong> Esta tabla sirve como referencia inicial para bicicletas MTB, pero <strong>no reemplaza la guía del modelo específico</strong>.
           </div>
         </div>
 
         <!-- TABLA INFANTIL RIN -->
         <div id="kidsCalcBox" style="display: none;">
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
-            En bicicletas infantiles la talla se determina según el <strong>tamaño del rin</strong> y la etapa del niño:
+            En bicicletas infantiles la talla se determina según el <strong>tamaño del rin</strong>:
           </p>
           <table class="size-table">
             <thead>
@@ -1090,64 +1125,95 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         PASO 3: BAJAR UNA BICICLETA DE LA BODEGA
-         ========================================== -->
+    <!-- ==========================================================
+         PASO 3: BAJAR BICICLETA DE BODEGA (POR ÍCONOS VISUALES)
+         ========================================================== -->
     <section class="step-section" id="step-3" data-keywords="bodega bajar bicicleta palanca gancho pecho asegurar procedimiento seguridad">
       <div class="section-banner">
         <div class="step-badge">3</div>
         <div>
-          <h2>Entrega · Paso 2: Bajar Bicicleta de Bodega</h2>
-          <p>Si la bicicleta que desea el cliente está en bodega, marca cada paso de seguridad al realizarlo.</p>
+          <h2>Entrega · Paso 2: Bajar de la Bodega</h2>
+          <p>Toca cada ícono en orden (del 1 al 5) para ver la acción exacta y marcarla como completada.</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-title">
-          <span>Procedimiento de Bodega (5 pasos)</span>
-          <span style="font-size:0.75rem; color:var(--text-muted);">Toca para marcar ✓</span>
+        <div class="tap-hint">👆 Toca cada ícono para leer el paso de seguridad</div>
+
+        <div class="icon-grid-5" id="bodegaGrid">
+          <!-- 1. UBICAR -->
+          <div class="icon-tile active" data-step-key="bod-1" onclick="selectVisualStep('bodega', 0, this)">
+            <span class="step-number-pill">1</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="28" cy="28" r="14" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M38 38L52 52" stroke="#00E676" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="28" cy="28" r="5" fill="currentColor" opacity="0.25"/>
+            </svg>
+            <div class="icon-tile-title">Ubicar Bici</div>
+          </div>
+
+          <!-- 2. SUJETAR PALANCA -->
+          <div class="icon-tile" data-step-key="bod-2" onclick="selectVisualStep('bodega', 1, this)">
+            <span class="step-number-pill">2</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <line x1="16" y1="14" x2="48" y2="14" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <path d="M32 14L22 46" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="20" cy="49" r="6" fill="#00E676"/>
+            </svg>
+            <div class="icon-tile-title">Sujetar Palanca</div>
+          </div>
+
+          <!-- 3. BAJAR AL PECHO -->
+          <div class="icon-tile" data-step-key="bod-3" onclick="selectVisualStep('bodega', 2, this)">
+            <span class="step-number-pill">3</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M32 12V44" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <path d="M20 34L32 46L44 34" stroke="#00E676" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="16" y="50" width="32" height="5" rx="2.5" fill="currentColor" opacity="0.3"/>
+            </svg>
+            <div class="icon-tile-title">Bajar al Pecho</div>
+          </div>
+
+          <!-- 4. RETIRAR DEL GANCHO -->
+          <div class="icon-tile" data-step-key="bod-4" onclick="selectVisualStep('bodega', 3, this)">
+            <span class="step-number-pill">4</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M32 10V26C32 33 42 33 42 26" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="32" cy="46" r="9" stroke="#00E676" stroke-width="3.5" stroke-dasharray="4 3"/>
+            </svg>
+            <div class="icon-tile-title">Sacar Gancho</div>
+          </div>
+
+          <!-- 5. ASEGURAR -->
+          <div class="icon-tile" data-step-key="bod-5" onclick="selectVisualStep('bodega', 4, this)">
+            <span class="step-number-pill">5</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M32 10L50 18V32C50 44 41 51 32 55C23 51 14 44 14 32V18L32 10Z" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M24 33L30 39L41 26" stroke="#00E676" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="icon-tile-title">Asegurar Bici</div>
+          </div>
         </div>
 
-        <div class="checklist">
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-1">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">1. Ubicar la bicicleta</div>
-              <div class="check-desc">Identifica con exactitud el modelo y talla que solicita el cliente.</div>
+        <!-- CAJA DE DETALLE DE BODEGA -->
+        <div class="visual-detail-box" id="bodegaDetailBox">
+          <div class="detail-header">
+            <div class="detail-title-group">
+              <span class="detail-big-badge" id="bodegaBadge">Paso 1 de 5</span>
+              <h3 class="detail-name" id="bodegaTitle">1. Ubicar la bicicleta</h3>
             </div>
           </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-2">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">2. Sujetar la palanca</div>
-              <div class="check-desc">Toma la palanca que sobresale del sistema donde está almacenada la bicicleta.</div>
-            </div>
-          </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-3">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">3. Bajar la bicicleta con cuidado</div>
-              <div class="check-desc">Tira de la palanca y <strong>empuja hacia tu pecho</strong>, realizando el movimiento con cuidado para evitar accidentes.</div>
-            </div>
-          </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-4">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">4. Retirar la bicicleta del gancho</div>
-              <div class="check-desc">Una vez que hayas bajado la bicicleta, sácala del gancho que la sujeta.</div>
-            </div>
-          </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-5">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">5. Asegurar la bicicleta</div>
-              <div class="check-desc">Verifica que la bicicleta esté estable y sujétala firmemente antes de moverla.</div>
-            </div>
-          </div>
+          <p class="detail-desc" id="bodegaDesc">
+            Identifica la bicicleta que solicita el cliente en el sistema de almacenamiento de la bodega.
+          </p>
+          <button class="btn-mark-step" id="bodegaMarkBtn" onclick="toggleCurrentStepCheck('bodega')">
+            ✓ Marcar este paso como realizado
+          </button>
         </div>
       </div>
 
@@ -1157,118 +1223,178 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         PASO 4: ASESORÍA DECATHLONIANA Y AJUSTES
-         ========================================== -->
+    <!-- ==========================================================
+         PASO 4: ASESORÍA Y AJUSTES CON LLAVE ALLEN POR ÍCONOS
+         ========================================================== -->
     <section class="step-section" id="step-4" data-keywords="asesoria decathloniana atender cliente tienda ajustes llave allen manubrio inflar llantas bomba aire presion frase full">
       <div class="section-banner">
         <div class="step-badge">4</div>
         <div>
           <h2>Asesoría Decathloniana & Ajustes</h2>
-          <p>Pasos para atender al cliente en tienda y dejar la bicicleta 100% ajustada antes de entregarla.</p>
+          <p>Toca los íconos de asesoría y las herramientas (Llave Allen / Bomba de Aire) para ver qué hacer en cada punto.</p>
         </div>
       </div>
 
-      <!-- SUBSECCIÓN 4.1: ATENCIÓN AL CLIENTE -->
+      <!-- SUBSECCIÓN 4.1: LOS 6 ÍCONOS DE ATENCIÓN AL CLIENTE -->
       <div class="card">
-        <div class="card-title">
-          <span>1. ¿Cómo atender al cliente en tienda?</span>
+        <div class="tap-hint">🗣️ 1. ¿Cómo atender al cliente? (Toca cada ícono)</div>
+
+        <div class="icon-grid-6" id="asesoriaGrid">
+          <div class="icon-tile active" data-step-key="ase-1" onclick="selectVisualStep('asesoria', 0, this)">
+            <span class="step-number-pill">1</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M12 18C12 14 15 12 19 12H45C49 12 52 14 52 18V36C52 40 49 42 45 42H26L14 52V42C12 41 12 38 12 36V18Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+              <circle cx="24" cy="27" r="2.5" fill="#00E676"/>
+              <circle cx="32" cy="27" r="2.5" fill="#00E676"/>
+              <circle cx="40" cy="27" r="2.5" fill="#00E676"/>
+            </svg>
+            <div class="icon-tile-title">¿Para qué la usa?</div>
+          </div>
+
+          <div class="icon-tile" data-step-key="ase-2" onclick="selectVisualStep('asesoria', 1, this)">
+            <span class="step-number-pill">2</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <rect x="22" y="10" width="20" height="44" rx="4" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M22 20H30M22 28H34M22 36H30M22 44H34" stroke="#00E676" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+            <div class="icon-tile-title">¿Cuánto mide?</div>
+          </div>
+
+          <div class="icon-tile" data-step-key="ase-3" onclick="selectVisualStep('asesoria', 2, this)">
+            <span class="step-number-pill">3</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M14 34L28 14H48L50 34L34 52L14 34Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+              <circle cx="39" cy="24" r="3.5" fill="#00E676"/>
+            </svg>
+            <div class="icon-tile-title">Tipo y Modelo</div>
+          </div>
+
+          <div class="icon-tile" data-step-key="ase-4" onclick="selectVisualStep('asesoria', 3, this)">
+            <span class="step-number-pill">4</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <rect x="12" y="14" width="40" height="36" rx="4" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M12 26H52M28 26V50" stroke="#00E676" stroke-width="3.2"/>
+            </svg>
+            <div class="icon-tile-title">Tabla del Modelo</div>
+          </div>
+
+          <div class="icon-tile" data-step-key="ase-5" onclick="selectVisualStep('asesoria', 4, this)">
+            <span class="step-number-pill">5</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="18" r="6" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M20 48L28 32H36L44 48M24 28H40" stroke="#00E676" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="icon-tile-title">Probar Ajuste</div>
+          </div>
+
+          <div class="icon-tile" data-step-key="ase-6" onclick="selectVisualStep('asesoria', 5, this)">
+            <span class="step-number-pill">6</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M14 46L32 16L50 46H14Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M32 28V36" stroke="#00E676" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="32" cy="41" r="2" fill="#00E676"/>
+            </svg>
+            <div class="icon-tile-title">¿Entre 2 Tallas?</div>
+          </div>
         </div>
 
-        <div class="checklist">
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-1">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">1. Pregunta para qué la necesita</div>
-              <div class="check-desc">Ej: <em>«¿La buscas para trocha, para hacer ejercicio o para transportarte por la ciudad?»</em></div>
+        <div class="visual-detail-box" id="asesoriaDetailBox">
+          <div class="detail-header">
+            <div class="detail-title-group">
+              <span class="detail-big-badge" id="asesoriaBadge">Paso 1 de 6</span>
+              <h3 class="detail-name" id="asesoriaTitle">1. Pregunta para qué la necesita</h3>
             </div>
           </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-2">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">2. Pregunta cuánto mide</div>
-              <div class="check-desc">Ej: <em>«¿Cuánto mides de estatura? Así puedo ayudarte a encontrar la talla adecuada»</em>.</div>
-            </div>
-          </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-3">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">3. Identifica el tipo y el modelo</div>
-              <div class="check-desc">Determina si es MTB, Rockrider, ruta, urbana o gravel.</div>
-            </div>
-          </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-4">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">4. Consulta la talla recomendada del modelo</div>
-              <div class="check-desc">Revisa la tabla del modelo; <strong>no asumas que todas las bicicletas talla M son iguales</strong>.</div>
-            </div>
-          </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-5">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">5. Comprueba el ajuste con el cliente</div>
-              <div class="check-desc">Permite que pruebe la bicicleta de forma segura: que pueda montarse, bajarse y alcanzar los controles cómodamente.</div>
-            </div>
-          </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-6">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">6. Si está entre dos tallas, verifica antes de recomendar</div>
-              <div class="check-desc">Consulta la geometría y la guía de la marca (no siempre conviene elegir la más grande o la más pequeña).</div>
-            </div>
-          </div>
+          <p class="detail-desc" id="asesoriaDesc">
+            Por ejemplo: <em>«¿La buscas para trocha, para hacer ejercicio o para transportarte por la ciudad?»</em>
+          </p>
+          <button class="btn-mark-step" id="asesoriaMarkBtn" onclick="toggleCurrentStepCheck('asesoria')">
+            ✓ Marcar este paso como realizado
+          </button>
         </div>
 
-        <!-- FRASE CLAVE -->
+        <!-- FRASE CLAVE ANTES DE LOS AJUSTES -->
         <div class="speech-card">
           <div class="speech-label">
-            <span>💬 Frase que debes decirle al cliente (Con amabilidad y seguridad)</span>
+            <span>💬 Frase al tener la bici en el piso (Con amabilidad y seguridad)</span>
             <button class="btn-copy" onclick="copyText('Antes de entregártela, le haré unos ajustes para entregártela full.', this)">Copiar</button>
           </div>
           <div class="speech-text">“Antes de entregártela, le haré unos ajustes para entregártela full”.</div>
         </div>
       </div>
 
-      <!-- SUBSECCIÓN 4.2: REALIZAR LOS AJUSTES -->
+      <!-- SUBSECCIÓN 4.2: ÍCONOS VISUALES DE AJUSTES (AYUDA + LLAVE ALLEN + BOMBA DE AIRE) -->
       <div class="card">
-        <div class="card-title">
-          <span>2. Realizar los ajustes de la bicicleta</span>
+        <div class="tap-hint">🔧 2. Ajustes antes de entregar (Toca cada ícono de herramienta)</div>
+
+        <div class="icon-grid-3" id="ajustesGrid">
+          <!-- 1. SOLICITAR AYUDA -->
+          <div class="icon-tile active" data-step-key="aju-1" onclick="selectVisualStep('ajustes', 0, this)">
+            <span class="step-number-pill">1</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M14 36L24 26L34 34L48 20" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 46H46" stroke="#00E676" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="24" cy="18" r="4" fill="currentColor"/>
+              <circle cx="40" cy="18" r="4" fill="#00E676"/>
+            </svg>
+            <div class="icon-tile-title">Pedir Apoyo al Cliente</div>
+            <div class="icon-tile-sub">Sujetar la bici</div>
+          </div>
+
+          <!-- 2. LLAVE ALLEN (HEXAGONAL L-WRENCH) -->
+          <div class="icon-tile" data-step-key="aju-2" onclick="selectVisualStep('ajustes', 1, this)">
+            <span class="step-number-pill">2</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <!-- Llave Allen en L + Hexágono -->
+              <path d="M18 16H42C45 16 47 18 47 21V48" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="24,34 30,30 36,34 36,41 30,45 24,41" stroke="#00E676" stroke-width="3.2" fill="none"/>
+            </svg>
+            <div class="icon-tile-title">Llave Allen</div>
+            <div class="icon-tile-sub">Apretar manubrio</div>
+          </div>
+
+          <!-- 3. BOMBA DE AIRE / LLANTAS -->
+          <div class="icon-tile" data-step-key="aju-3" onclick="selectVisualStep('ajustes', 2, this)">
+            <span class="step-number-pill">3</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <!-- Bomba de aire -->
+              <path d="M22 12H42M32 12V22" stroke="#00E676" stroke-width="4" stroke-linecap="round"/>
+              <rect x="26" y="22" width="12" height="26" rx="3" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M20 48H44" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="48" cy="36" r="5" stroke="#00E676" stroke-width="3"/>
+            </svg>
+            <div class="icon-tile-title">Inflar Llantas</div>
+            <div class="icon-tile-sub">Bomba de aire</div>
+          </div>
         </div>
 
-        <div class="checklist">
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="aju-1">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">1. Solicitar ayuda al cliente</div>
-              <div class="check-desc">Pídele amablemente que te ayude a sujetar la bicicleta para mantenerla estable mientras realizas los ajustes.</div>
+        <!-- CAJA DE DETALLE DE LA HERRAMIENTA SELECCIONADA -->
+        <div class="visual-detail-box" id="ajustesDetailBox">
+          <div class="detail-header">
+            <div class="detail-title-group">
+              <span class="detail-big-badge" id="ajustesBadge">Ajuste 1 de 3</span>
+              <h3 class="detail-name" id="ajustesTitle">1. Solicitar ayuda al cliente</h3>
             </div>
           </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="aju-2">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">2. Apretar el manubrio (Llave Allen)</div>
-              <div class="check-desc">Utiliza la <strong>llave Allen</strong> para apretar los tornillos de la parte superior del manubrio y asegurarte de que quede firme y bien alineado.</div>
-            </div>
-          </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="aju-3">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">3. Inflar las llantas</div>
-              <div class="check-desc">Utiliza la bomba de aire para inflar las llantas según la presión recomendada para el modelo.</div>
-            </div>
-          </div>
+          <p class="detail-desc" id="ajustesDesc">
+            Pídele amablemente al cliente que te ayude a sujetar la bicicleta para mantenerla estable mientras realizas los ajustes.
+          </p>
+          <button class="btn-mark-step" id="ajustesMarkBtn" onclick="toggleCurrentStepCheck('ajustes')">
+            ✓ Marcar este ajuste como realizado
+          </button>
         </div>
 
         <div class="alert-box">
-          🔧 <strong>Importante:</strong> Recuerda utilizar siempre la llave Allen para apretar los tornillos y verificar que el manubrio quede <strong>firme y bien alineado</strong> antes de entregar la bicicleta.
+          🔧 <strong>Importante:</strong> Recuerda utilizar la <strong>llave Allen</strong> para apretar los tornillos y verificar que el manubrio quede <strong>firme y bien alineado</strong> antes de entregar la bicicleta.
         </div>
       </div>
 
@@ -1278,57 +1404,81 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         PASO 5: GANA MEDALLIA
-         ========================================== -->
+    <!-- ==========================================================
+         PASO 5: GANA MEDALLIA (POR ÍCONOS VISUALES)
+         ========================================================== -->
     <section class="step-section" id="step-5" data-keywords="gana medallia accesorios luces trasera roja blanca timbre detalle speech encuesta">
       <div class="section-banner">
         <div class="step-badge">5</div>
         <div>
-          <h2>Gana Medallia ⭐ (Cierre de Oro)</h2>
-          <p>Ve más allá de la venta del producto, sorprende al cliente y recuérdale la encuesta de compra.</p>
+          <h2>Gana Medallia ⭐ (Cierre de Venta)</h2>
+          <p>Toca cada ícono para revisar accesorios, dar el detalle sorpresa y recordar la encuesta.</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-title">
-          <span>¿El modelo elegido incluye accesorios?</span>
+        <div class="tap-hint">👆 Toca el escenario del modelo escogido por el cliente</div>
+
+        <div class="icon-grid-3" id="medalliaGrid">
+          <!-- 1. SÍ INCLUYE ACCESORIOS -->
+          <div class="icon-tile active" data-step-key="med-1" onclick="selectVisualStep('medallia', 0, this)">
+            <span class="step-number-pill">1</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="28" r="12" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M48 22L54 18M48 28H56M48 34L54 38" stroke="#00E676" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M26 46H38" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <div class="icon-tile-title">SÍ Incluye Accesorios</div>
+            <div class="icon-tile-sub">Luces / Timbre</div>
+          </div>
+
+          <!-- 2. NO INCLUYE ACCESORIOS (DETALLE SORPRESA) -->
+          <div class="icon-tile" data-step-key="med-2" onclick="selectVisualStep('medallia', 1, this)">
+            <span class="step-number-pill">2</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <rect x="14" y="26" width="36" height="24" rx="3" stroke="currentColor" stroke-width="3.5"/>
+              <path d="M12 26H52M32 26V50" stroke="#00E676" stroke-width="3.5"/>
+              <path d="M32 26C24 26 20 16 27 14C32 13 32 22 32 26ZM32 26C40 26 44 16 37 14C32 13 32 22 32 26Z" stroke="currentColor" stroke-width="3"/>
+            </svg>
+            <div class="icon-tile-title">NO Incluye (Dar Detalle)</div>
+            <div class="icon-tile-sub">Luz o timbre extra</div>
+          </div>
+
+          <!-- 3. ENCUESTA MEDALLIA -->
+          <div class="icon-tile" data-step-key="med-3" onclick="selectVisualStep('medallia', 2, this)">
+            <span class="step-number-pill">3</span>
+            <span class="done-dot">✓</span>
+            <svg viewBox="0 0 64 64" fill="none">
+              <polygon points="32,12 38,25 52,27 42,37 44,51 32,44 20,51 22,37 12,27 26,25" stroke="#00E676" stroke-width="3.5" fill="currentColor" fill-opacity="0.15"/>
+            </svg>
+            <div class="icon-tile-title">Encuesta Medallia</div>
+            <div class="icon-tile-sub">Opinión de compra</div>
+          </div>
         </div>
 
-        <div class="checklist">
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="med-1">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">Opción A: SÍ incluye accesorios de fábrica</div>
-              <div class="check-desc">Revisa en la información del modelo si incluye luces traseras (roja, blanca) o timbre. Comunícale al cliente que vas a colocarle sus accesorios y <strong>muéstrale cómo se utiliza cada uno</strong>.</div>
+        <div class="visual-detail-box" id="medalliaDetailBox">
+          <div class="detail-header">
+            <div class="detail-title-group">
+              <span class="detail-big-badge" id="medalliaBadge">Opción 1</span>
+              <h3 class="detail-name" id="medalliaTitle">1. Si el modelo SÍ incluye accesorios</h3>
             </div>
           </div>
-
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="med-2">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">Opción B: NO incluye accesorios</div>
-              <div class="check-desc">Indícale que por su compra con nosotros le darás un detalle adicional (puede incluir una luz pequeña, roja o timbre).</div>
-            </div>
-          </div>
+          <p class="detail-desc" id="medalliaDesc">
+            Revisa en la información del modelo si incluye luces traseras (roja, blanca) o timbre. Comunícale al cliente que vas a colocarle sus accesorios y <strong>muéstrale cómo se utiliza cada uno</strong>.
+          </p>
+          <button class="btn-mark-step" id="medalliaMarkBtn" onclick="toggleCurrentStepCheck('medallia')">
+            ✓ Marcar como realizado
+          </button>
         </div>
 
         <div class="speech-card">
           <div class="speech-label">
-            <span>🎁 Tu Speech Gana Medallia</span>
+            <span>🎁 Tu Speech cuando le das un detalle adicional</span>
             <button class="btn-copy" onclick="copyText('Dama/caballero, por su compra y tomar una muy buena elección, le daré un detalle que no está incluido en su compra.', this)">Copiar</button>
           </div>
           <div class="speech-text">“Dama/caballero, por su compra y tomar una muy buena elección, le daré un detalle que no está incluido en su compra”.</div>
-        </div>
-
-        <div class="checklist" style="margin-top: 12px;">
-          <div class="check-item" onclick="toggleCheck(this)" data-check-id="med-3">
-            <div class="check-box">✓</div>
-            <div class="check-content">
-              <div class="check-title">Paso Final: Recordar la encuesta de compra (Medallia)</div>
-              <div class="check-desc">Esto permite ir más allá de la venta y acoger al cliente. Por último, <strong>recuérdale colocar su opinión en la encuesta de compra</strong>.</div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -1339,7 +1489,7 @@
     </section>
   </main>
 
-  <!-- NAVEGACIÓN INFERIOR FIJA PARA MÓVIL -->
+  <!-- NAVEGACIÓN INFERIOR -->
   <nav class="bottom-nav" aria-label="Navegación de pasos">
     <button class="nav-btn active" onclick="goToStep(1)" data-nav="1">
       <span class="nav-icon">🚲</span>
@@ -1363,41 +1513,181 @@
     </button>
   </nav>
 
-  <!-- MODAL DE INSTRUCCIONES PARA DESCARGAR EN TELÉFONO -->
+  <!-- MODAL DE INSTALACIÓN -->
   <div class="modal-backdrop" id="installModal" onclick="if(event.target===this) closeInstallModal()">
     <div class="modal-sheet">
       <div class="modal-header">
         <h3>📲 Tener Acceso Rápido en tu Celular</h3>
         <button class="btn-close-modal" onclick="closeInstallModal()">✕</button>
       </div>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">
-        Guarda este manual en la pantalla de inicio de tu teléfono para abrirlo en 1 toque como una App (incluso sin internet):
-      </p>
-
       <div class="os-card">
         <h4>🤖 En Android (Google Chrome)</h4>
         <ol>
-          <li>Toca el botón de los <strong>3 puntos (⋮)</strong> arriba a la derecha en Chrome.</li>
-          <li>Selecciona <strong>"Instalar aplicación"</strong> o <strong>"Agregar a la pantalla principal"</strong>.</li>
-          <li>Confirma en <strong>Agregar</strong> y tendrás el ícono directo en tu teléfono.</li>
+          <li>Toca los <strong>3 puntos (⋮)</strong> arriba a la derecha en Chrome.</li>
+          <li>Elige <strong>"Instalar aplicación"</strong> o <strong>"Agregar a la pantalla principal"</strong>.</li>
         </ol>
       </div>
-
       <div class="os-card">
         <h4>🍎 En iPhone (Safari)</h4>
         <ol>
-          <li>Toca el botón <strong>Compartir (cuadro con flecha hacia arriba ⬆️)</strong> en la barra inferior de Safari.</li>
-          <li>Desliza hacia abajo y toca <strong>"Agregar a Inicio"</strong> (Add to Home Screen).</li>
-          <li>Toca <strong>Agregar</strong> arriba a la derecha.</li>
+          <li>Toca el botón <strong>Compartir (⬆️)</strong> abajo en Safari.</li>
+          <li>Selecciona <strong>"Agregar a Inicio"</strong>.</li>
         </ol>
       </div>
-
-      <button class="btn-step-nav primary" style="width: 100%;" onclick="closeInstallModal()">¡Entendido!</button>
+      <button class="btn-step-nav primary" style="width: 100%;" onclick="closeInstallModal()">¡Listo!</button>
     </div>
   </div>
 
   <script>
-    // ESTADO DE NAVEGACIÓN
+    // 1. DATOS DE TIPOS DE BICICLETAS (AL HACER CLIC EN ÍCONO MUESTRA NOMBRES Y DETALLES)
+    const BIKE_TYPES = {
+      mtb: {
+        badge: 'Marca: ROCKRIDER',
+        title: 'Bicicletas de Montaña (MTB)',
+        desc: 'Diseñadas para terrenos difíciles y travesías todoterreno, principalmente bajo nuestra marca propia <strong>Rockrider</strong>.',
+        tags: ['🏷️ Nombre / Marca: Rockrider', '⛰️ Terreno: Trocha y Montaña', '📏 Tallas: S, M, L, XL']
+      },
+      ruta: {
+        badge: 'Marca: VAN RYSEL',
+        title: 'Bicicletas de Ruta / Carretera',
+        desc: 'Creadas para velocidad y rendimiento en asfalto, desarrolladas bajo la marca <strong>Van Rysel</strong>.',
+        tags: ['🏷️ Nombre / Marca: Van Rysel', '🛣️ Terreno: Asfalto y Velocidad', '⚡ Enfoque: Rendimiento']
+      },
+      urbana: {
+        badge: 'Líneas: ELOPS y RIVERSIDE',
+        title: 'Bicicletas Urbanas e Híbridas',
+        desc: 'Pensadas para el transporte diario y la movilidad en la ciudad, bajo las líneas <strong>Elops</strong> (urbana clásica) y <strong>Riverside</strong> (híbrida/polivalente).',
+        tags: ['🏷️ Nombres: Elops y Riverside', '🏙️ Terreno: Ciudad y Ciclorruta', '🎒 Uso: Transporte diario']
+      },
+      plegable: {
+        badge: 'Línea: TILT',
+        title: 'Bicicletas Plegables',
+        desc: 'Compactas para facilitar su transporte y almacenamiento en espacios reducidos, bajo la <strong>línea Tilt</strong>.',
+        tags: ['🏷️ Nombre / Línea: Tilt', '🚈 Ventaja: Fácil de guardar y transportar', '🏢 Ideal: Apartamento / Bus']
+      },
+      ninos: {
+        badge: 'Por Tamaño de RIN (12" a 26")',
+        title: 'Bicicletas para Niños (Tipo de Rin)',
+        desc: 'Se eligen según el tamaño del rin y la etapa de aprendizaje del niño: <strong>Rin 12, Rin 14, Rin 16, Rin 20, Rin 24 y Rin 26</strong>.',
+        tags: ['🏷️ Clasificación: Por Rin (12" a 26")', '🧒 Etapa: Aprendizaje a Transición', '👉 Ver tabla en Paso 2']
+      }
+    };
+
+    function selectBikeType(key, tileEl) {
+      document.querySelectorAll('#bikeTypeGrid .icon-tile').forEach(el => el.classList.remove('active'));
+      tileEl.classList.add('active');
+
+      const data = BIKE_TYPES[key];
+      document.getElementById('bikeBrandBadge').textContent = data.badge;
+      document.getElementById('bikeTitle').textContent = data.title;
+      document.getElementById('bikeDesc').innerHTML = data.desc;
+      document.getElementById('bikeTags').innerHTML = data.tags
+        .map(t => `<span class="detail-chip">${t}</span>`)
+        .join('');
+    }
+
+    // 2. DATOS DE ÍCONOS INTERACTIVOS PARA BODEGA, ASESORÍA, AJUSTES (ALLEN) Y MEDALLIA
+    const VISUAL_STEPS = {
+      bodega: [
+        { key: 'bod-1', badge: 'Paso 1 de 5', title: '1. Ubicar la bicicleta', desc: 'Identifica la bicicleta exacta (modelo, color y talla) que solicita el cliente en la bodega.' },
+        { key: 'bod-2', badge: 'Paso 2 de 5', title: '2. Sujetar la palanca', desc: 'Toma con firmeza la palanca que sobresale del sistema donde está almacenada la bicicleta.' },
+        { key: 'bod-3', badge: 'Paso 3 de 5', title: '3. Bajar la bicicleta hacia tu pecho', desc: 'Tira de la palanca y <strong>empuja hacia tu pecho</strong>, realizando el movimiento con cuidado para evitar accidentes.' },
+        { key: 'bod-4', badge: 'Paso 4 de 5', title: '4. Retirar la bicicleta del gancho', desc: 'Una vez que hayas bajado la bicicleta completamente, sácala del gancho que la sujeta.' },
+        { key: 'bod-5', badge: 'Paso 5 de 5', title: '5. Asegurar la bicicleta', desc: 'Verifica que la bicicleta esté estable en el suelo y sujétala firmemente antes de moverla.' }
+      ],
+      asesoria: [
+        { key: 'ase-1', badge: 'Paso 1 de 6', title: '1. Pregunta para qué la necesita', desc: 'Por ejemplo: <em>«¿La buscas para trocha, para hacer ejercicio o para transportarte por la ciudad?»</em>' },
+        { key: 'ase-2', badge: 'Paso 2 de 6', title: '2. Pregunta cuánto mide', desc: 'Puedes decir: <em>«¿Cuánto mides de estatura? Así puedo ayudarte a encontrar la talla adecuada»</em>.' },
+        { key: 'ase-3', badge: 'Paso 3 de 6', title: '3. Identifica el tipo y el modelo', desc: 'Determina si lo ideal para el cliente es <strong>MTB, Rockrider, ruta, urbana o gravel</strong>.' },
+        { key: 'ase-4', badge: 'Paso 4 de 6', title: '4. Consulta la talla recomendada', desc: 'Revisa la tabla del modelo específico; <strong>no asumas que todas las bicicletas talla M son iguales</strong>.' },
+        { key: 'ase-5', badge: 'Paso 5 de 6', title: '5. Comprueba el ajuste con el cliente', desc: 'Si es posible, permite que el cliente pruebe la bicicleta de forma segura y verifica que pueda montarse, bajarse y alcanzar los controles cómodamente.' },
+        { key: 'ase-6', badge: 'Paso 6 de 6', title: '6. Si está entre dos tallas, verifica antes', desc: 'Consulta la geometría y la guía de la marca, porque no siempre conviene elegir la más grande o la más pequeña.' }
+      ],
+      ajustes: [
+        { key: 'aju-1', badge: 'Herramienta / Paso 1', title: '1. Solicitar ayuda al cliente', desc: 'Pídele amablemente al cliente que te ayude a sujetar la bicicleta para mantenerla estable mientras realizas los ajustes.' },
+        { key: 'aju-2', badge: 'Herramienta: LLAVE ALLEN', title: '2. Apretar el manubrio con Llave Allen', desc: 'Utiliza la <strong>llave Allen</strong> para apretar los tornillos de la parte superior del manubrio y asegurarte de que quede <strong>firme y bien alineado</strong>.' },
+        { key: 'aju-3', badge: 'Herramienta: BOMBA DE AIRE', title: '3. Inflar las llantas a la presión recomendada', desc: 'Utiliza la <strong>bomba de aire</strong> para inflar las llantas de la bicicleta según la presión recomendada para el modelo.' }
+      ],
+      medallia: [
+        { key: 'med-1', badge: 'Escenario A', title: '1. Si el modelo SÍ incluye accesorios', desc: 'Revisa en la información del modelo si incluye luces traseras (roja, blanca) o timbre. Comunícale al cliente que vas a colocarle sus accesorios y <strong>muéstrale cómo se utiliza cada uno</strong>.' },
+        { key: 'med-2', badge: 'Escenario B', title: '2. Si NO incluye accesorios (Dar detalle adicional)', desc: 'Indícale que por su compra con nosotros le darás un detalle adicional: puede incluir un accesorio como <strong>luz pequeña, roja o timbre</strong>.' },
+        { key: 'med-3', badge: 'Cierre Medallia ⭐', title: '3. Recordar encuesta de compra', desc: 'Esto permite ir más allá de la venta del producto y acoger al cliente en su compra. Por último, <strong>recuérdale colocar su opinión en la encuesta de compra</strong>.' }
+      ]
+    };
+
+    const currentGroupIndex = { bodega: 0, asesoria: 0, ajustes: 0, medallia: 0 };
+    let checkedSet = new Set();
+
+    function selectVisualStep(group, index, tileEl) {
+      currentGroupIndex[group] = index;
+      const gridId = group + 'Grid';
+      document.querySelectorAll(`#${gridId} .icon-tile`).forEach(el => el.classList.remove('active'));
+      if (tileEl) tileEl.classList.add('active');
+
+      const item = VISUAL_STEPS[group][index];
+      document.getElementById(group + 'Badge').textContent = item.badge;
+      document.getElementById(group + 'Title').textContent = item.title;
+      document.getElementById(group + 'Desc').innerHTML = item.desc;
+
+      updateMarkButtonUI(group, item.key);
+    }
+
+    function updateMarkButtonUI(group, stepKey) {
+      const btn = document.getElementById(group + 'MarkBtn');
+      const isDone = checkedSet.has(stepKey);
+      btn.classList.toggle('is-done', isDone);
+      btn.textContent = isDone ? '✅ ¡Paso completado! (Toca para desmarcar)' : '✓ Marcar este paso como realizado';
+    }
+
+    function toggleCurrentStepCheck(group) {
+      const idx = currentGroupIndex[group];
+      const item = VISUAL_STEPS[group][idx];
+      if (checkedSet.has(item.key)) {
+        checkedSet.delete(item.key);
+      } else {
+        checkedSet.add(item.key);
+      }
+      syncTilesAndProgress();
+      updateMarkButtonUI(group, item.key);
+
+      // Si lo acaba de marcar y hay un siguiente ícono en ese grupo, avanza suavemente
+      if (checkedSet.has(item.key) && idx + 1 < VISUAL_STEPS[group].length) {
+        const nextTile = document.querySelectorAll(`#${group}Grid .icon-tile`)[idx + 1];
+        setTimeout(() => selectVisualStep(group, idx + 1, nextTile), 280);
+      }
+    }
+
+    function syncTilesAndProgress() {
+      document.querySelectorAll('.icon-tile[data-step-key]').forEach(tile => {
+        const key = tile.dataset.stepKey;
+        tile.classList.toggle('checked-tile', checkedSet.has(key));
+      });
+
+      try {
+        localStorage.setItem('decathlon_bici_visual_checks', JSON.stringify(Array.from(checkedSet)));
+      } catch (e) {}
+    }
+
+    function loadChecks() {
+      try {
+        const saved = JSON.parse(localStorage.getItem('decathlon_bici_visual_checks') || '[]');
+        checkedSet = new Set(saved);
+      } catch (e) {}
+      syncTilesAndProgress();
+      ['bodega', 'asesoria', 'ajustes', 'medallia'].forEach(g => {
+        updateMarkButtonUI(g, VISUAL_STEPS[g][currentGroupIndex[g]].key);
+      });
+    }
+
+    function resetChecks() {
+      checkedSet.clear();
+      syncTilesAndProgress();
+      ['bodega', 'asesoria', 'ajustes', 'medallia'].forEach(g => {
+        updateMarkButtonUI(g, VISUAL_STEPS[g][currentGroupIndex[g]].key);
+      });
+    }
+
+    // NAVEGACIÓN ENTRE SECCIONES
     let currentStep = 1;
     let isViewAll = false;
     let deferredPrompt = null;
@@ -1413,8 +1703,6 @@
         });
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-
-      // Actualizar botones activos
       document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.classList.toggle('active', Number(btn.dataset.nav) === stepNum);
       });
@@ -1429,12 +1717,10 @@
       const btn = document.getElementById('btnViewAll');
       btn.classList.toggle('active', isViewAll);
       btn.textContent = isViewAll ? '🎯 Modo Pasos' : '📖 Ver Todo';
-      if (!isViewAll) {
-        goToStep(currentStep);
-      }
+      if (!isViewAll) goToStep(currentStep);
     }
 
-    // CALCULADORA DE TALLAS
+    // CALCULADORA DE TALLAS (INTACTA 10/10)
     function switchSizeMode(mode) {
       document.getElementById('tabAdult').classList.toggle('active', mode === 'adult');
       document.getElementById('tabKids').classList.toggle('active', mode === 'kids');
@@ -1447,97 +1733,32 @@
       document.getElementById('heightValueLabel').textContent = val + ' cm';
       let size = 'S';
       let label = 'S (Small)';
-      if (val >= 150 && val <= 164) {
-        size = 'S'; label = 'S (Small)';
-      } else if (val >= 165 && val <= 174) {
-        size = 'M'; label = 'M (Medium)';
-      } else if (val >= 175 && val <= 184) {
-        size = 'L'; label = 'L (Large)';
-      } else if (val >= 185) {
-        size = 'XL'; label = 'XL (Extra Large)';
-      }
-      document.getElementById('sizeResultBadge').textContent = 'Talla Orientativa: ' + label;
+      if (val >= 150 && val <= 164) { size = 'S'; label = 'S (Small)'; }
+      else if (val >= 165 && val <= 174) { size = 'M'; label = 'M (Medium)'; }
+      else if (val >= 175 && val <= 184) { size = 'L'; label = 'L (Large)'; }
+      else if (val >= 185) { size = 'XL'; label = 'XL (Extra Large)'; }
 
+      document.getElementById('sizeResultBadge').textContent = 'Talla Orientativa: ' + label;
       document.querySelectorAll('#adultSizeTable tbody tr').forEach(row => {
         row.classList.toggle('highlighted', row.dataset.size === size);
       });
     }
 
-    // CHECKLIST INTERACTIVO CON GUARDADO LOCAL
-    function toggleCheck(el) {
-      el.classList.toggle('checked');
-      saveChecks();
-      updateProgress();
-    }
-
-    function updateProgress() {
-      const allItems = document.querySelectorAll('.check-item');
-      const checkedItems = document.querySelectorAll('.check-item.checked');
-      const total = allItems.length;
-      const done = checkedItems.length;
-      document.getElementById('progressCounter').textContent = `${done} / ${total} listos`;
-      const pct = total > 0 ? Math.round((done / total) * 100) : 0;
-      document.getElementById('progressBarFill').style.width = pct + '%';
-    }
-
-    function saveChecks() {
-      const checkedIds = [];
-      document.querySelectorAll('.check-item.checked').forEach(item => {
-        checkedIds.push(item.dataset.checkId);
-      });
-      try {
-        localStorage.setItem('decathlon_bici_checks', JSON.stringify(checkedIds));
-      } catch (e) {}
-    }
-
-    function loadChecks() {
-      try {
-        const saved = JSON.parse(localStorage.getItem('decathlon_bici_checks') || '[]');
-        document.querySelectorAll('.check-item').forEach(item => {
-          if (saved.includes(item.dataset.checkId)) {
-            item.classList.add('checked');
-          }
-        });
-      } catch (e) {}
-      updateProgress();
-    }
-
-    function resetChecks() {
-      document.querySelectorAll('.check-item.checked').forEach(item => {
-        item.classList.remove('checked');
-      });
-      try {
-        localStorage.removeItem('decathlon_bici_checks');
-      } catch (e) {}
-      updateProgress();
-    }
-
-    // COPIAR SPEECH
     function copyText(text, btn) {
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(text);
-      }
+      if (navigator.clipboard) navigator.clipboard.writeText(text);
       const old = btn.textContent;
       btn.textContent = '¡Copiado!';
-      setTimeout(() => { btn.textContent = old; }, 1600);
+      setTimeout(() => { btn.textContent = old; }, 1500);
     }
 
-    // BUSCADOR INSTANTÁNEO
     function filterContent(query) {
       const q = query.trim().toLowerCase();
-      const clearBtn = document.getElementById('searchClear');
-      clearBtn.style.display = q.length > 0 ? 'inline-flex' : 'none';
-
+      document.getElementById('searchClear').style.display = q.length > 0 ? 'inline-flex' : 'none';
       if (!q) {
-        if (!isViewAll) {
-          goToStep(currentStep);
-        } else {
-          document.querySelectorAll('.step-section').forEach(sec => sec.style.display = 'block');
-        }
+        document.querySelectorAll('.step-section').forEach(sec => sec.style.display = '');
+        if (!isViewAll) goToStep(currentStep);
         return;
       }
-
-      // Al buscar, mostramos todas las secciones que coincidan
       document.querySelectorAll('.step-section').forEach(sec => {
         const text = (sec.innerText + ' ' + (sec.dataset.keywords || '')).toLowerCase();
         sec.style.display = text.includes(q) ? 'block' : 'none';
@@ -1545,14 +1766,10 @@
     }
 
     function clearSearch() {
-      const input = document.getElementById('searchInput');
-      input.value = '';
+      document.getElementById('searchInput').value = '';
       filterContent('');
-      document.querySelectorAll('.step-section').forEach(sec => sec.style.display = '');
-      if (!isViewAll) goToStep(currentStep);
     }
 
-    // INSTALACIÓN PWA (ANDROID CHROME + IPHONE SAFARI)
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
@@ -1561,9 +1778,7 @@
     function handleInstallClick() {
       if (deferredPrompt) {
         deferredPrompt.prompt();
-        deferredPrompt.userChoice.finally(() => {
-          deferredPrompt = null;
-        });
+        deferredPrompt.userChoice.finally(() => { deferredPrompt = null; });
       } else {
         document.getElementById('installModal').classList.add('open');
       }
@@ -1573,14 +1788,12 @@
       document.getElementById('installModal').classList.remove('open');
     }
 
-    // REGISTRO DE SERVICE WORKER PARA ACCESO OFFLINE
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw-bicis.js').catch(() => {});
       });
     }
 
-    // INICIALIZAR
     loadChecks();
   </script>
 </body>
