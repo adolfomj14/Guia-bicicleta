@@ -1,0 +1,18 @@
+{
+  "name": "Manual Bicicletas · Asesoría y Entrega",
+  "short_name": "Guía Bicis",
+  "description": "Guía interactiva para venta, verificación de talla, bodega y entrega de bicicletas al estilo Decathlon.",
+  "start_url": "./guia_bicicletas.html",
+  "display": "standalone",
+  "background_color": "#F4F6FB",
+  "theme_color": "#3643BA",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233643BA'/%3E%3Ccircle cx='28' cy='65' r='14' fill='none' stroke='%23ffffff' stroke-width='6'/%3E%3Ccircle cx='72' cy='65' r='14' fill='none' stroke='%23ffffff' stroke-width='6'/%3E%3Cpath d='M28 65 L46 40 L66 40 L50 65 Z' fill='none' stroke='%2300E676' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M62 32 L72 65 M42 33 L50 33' stroke='%23ffffff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

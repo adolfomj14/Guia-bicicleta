@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Guía Ciclismo · Asesoría & Entrega</title>
+  <meta name="description" content="Manual interactivo de venta, tallas, bodega y entrega de bicicletas al estilo Decathlon.">
+  <meta name="theme-color" content="#3643BA">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Guía Bicis">
+  <link rel="manifest" href="manifest-bicis.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233643BA'/%3E%3Ccircle cx='28' cy='65' r='14' fill='none' stroke='%23ffffff' stroke-width='6'/%3E%3Ccircle cx='72' cy='65' r='14' fill='none' stroke='%23ffffff' stroke-width='6'/%3E%3Cpath d='M28 65 L46 40 L66 40 L50 65 Z' fill='none' stroke='%2300E676' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M62 32 L72 65 M42 33 L50 33' stroke='%23ffffff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233643BA'/%3E%3Ccircle cx='28' cy='65' r='14' fill='none' stroke='%23ffffff' stroke-width='6'/%3E%3Ccircle cx='72' cy='65' r='14' fill='none' stroke='%23ffffff' stroke-width='6'/%3E%3Cpath d='M28 65 L46 40 L66 40 L50 65 Z' fill='none' stroke='%2300E676' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M62 32 L72 65 M42 33 L50 33' stroke='%23ffffff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3643BA;
+      --primary-dark: #252E8A;
+      --primary-light: #EEF0FF;
+      --accent: #00C853;
+      --accent-soft: #E8F8EE;
+      --warning: #FF8F00;
+      --warning-soft: #FFF8E1;
+      --danger: #D32F2F;
+      --bg: #F4F6FB;
+      --card: #FFFFFF;
+      --text: #141726;
+      --text-muted: #5E6478;
+      --border: #E2E6F0;
+      --radius: 18px;
+      --shadow: 0 6px 24px rgba(20, 23, 38, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding-bottom: 96px;
+      overflow-x: hidden;
+    }
+
+    /* TOP HEADER */
+    .app-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      padding: 18px 16px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 4px 20px rgba(37, 46, 138, 0.22);
+    }
+
+    .header-top {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .brand-subtitle {
+      font-size: 0.76rem;
+      opacity: 0.85;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-install {
+      background: #00E676;
+      color: #092214;
+      border: none;
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(0, 230, 118, 0.35);
+      transition: transform 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-install:active {
+      transform: scale(0.95);
+    }
+
+    /* SEARCH & QUICK JUMP BAR */
+    .search-wrap {
+      max-width: 780px;
+      margin: 12px auto 0;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 11px 38px 11px 38px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .search-input:focus {
+      background: #fff;
+      color: var(--text);
+      border-color: #fff;
+    }
+
+    .search-input:focus::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .search-clear {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.2);
+      color: #fff;
+      border: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      font-size: 12px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* VIEW MODE SWITCHER (Paso a paso vs Ver Todo) */
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 16px;
+      background: var(--card);
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .progress-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .progress-ring {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+
+    .progress-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: #E9ECF5;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 99px;
+      transition: width 0.3s ease;
+    }
+
+    .mode-toggle {
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid rgba(54, 67, 186, 0.2);
+      padding: 7px 11px;
+      border-radius: 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .mode-toggle.active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* QUICK ACCESS PILLS */
+    .quick-pills {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      scrollbar-width: none;
+    }
+    .quick-pills::-webkit-scrollbar {
+      display: none;
+    }
+
+    .pill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .pill.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(54, 67, 186, 0.25);
+    }
+
+    /* SECTIONS */
+    .step-section {
+      display: none;
+      animation: fadeIn 0.22s ease;
+    }
+
+    .step-section.active {
+      display: block;
+    }
+
+    body.view-all .step-section {
+      display: block;
+      margin-bottom: 28px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-banner {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .step-badge {
+      background: var(--primary);
+      color: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .section-banner h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .section-banner p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* CARDS & GRIDS */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .card-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .bike-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 580px) {
+      .bike-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .bike-card {
+      border: 1.5px solid var(--border);
+      border-radius: 15px;
+      padding: 15px;
+      background: #fff;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bike-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .bike-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .bike-icon {
+      font-size: 1.5rem;
+      background: var(--primary-light);
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-tag {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 4px 9px;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .bike-card h3 {
+      font-size: 0.96rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .bike-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .bike-question {
+      margin-top: 10px;
+      padding-top: 9px;
+      border-top: 1px dashed var(--border);
+      font-size: 0.78rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* SIZE CALCULATOR */
+    .calc-tabs {
+      display: flex;
+      background: #EDF0F7;
+      padding: 4px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .calc-tab {
+      flex: 1;
+      text-align: center;
+      padding: 9px 12px;
+      border-radius: 9px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+
+    .calc-tab.active {
+      background: #fff;
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    }
+
+    .slider-box {
+      background: var(--primary-light);
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 14px;
+      border: 1px solid rgba(54, 67, 186, 0.15);
+    }
+
+    .height-display {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .height-range-input {
+      width: 100%;
+      margin: 14px 0 8px;
+      accent-color: var(--primary);
+      height: 8px;
+      cursor: pointer;
+    }
+
+    .size-result-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 99px;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-top: 6px;
+    }
+
+    .size-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+
+    .size-table th,
+    .size-table td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .size-table th {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .size-table tr.highlighted {
+      background: var(--accent-soft);
+      font-weight: 700;
+    }
+
+    .size-table tr.highlighted td:last-child {
+      color: #008637;
+      font-weight: 900;
+    }
+
+    /* SPEECH CALLOUT BOX */
+    .speech-card {
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border-left: 5px solid var(--primary);
+      border-radius: 14px;
+      padding: 15px 16px;
+      margin: 12px 0;
+      position: relative;
+    }
+
+    .speech-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .speech-text {
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: #1E255E;
+      font-style: italic;
+    }
+
+    .btn-copy {
+      background: #fff;
+      border: 1px solid rgba(54, 67, 186, 0.25);
+      color: var(--primary);
+      padding: 4px 9px;
+      border-radius: 7px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* INTERACTIVE CHECKLIST */
+    .checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 14px;
+      border-radius: 13px;
+      border: 1.5px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      user-select: none;
+    }
+
+    .check-item:active {
+      transform: scale(0.99);
+    }
+
+    .check-item.checked {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    .check-box {
+      width: 24px;
+      height: 24px;
+      border-radius: 7px;
+      border: 2px solid #B6BFD6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 0.85rem;
+      color: transparent;
+      background: #fff;
+      transition: all 0.18s;
+    }
+
+    .check-item.checked .check-box {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .check-content {
+      flex: 1;
+    }
+
+    .check-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .check-item.checked .check-title {
+      text-decoration: line-through;
+      color: #2E6B47;
+    }
+
+    .check-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ALERT / NOTE BOX */
+    .alert-box {
+      background: var(--warning-soft);
+      border: 1px solid #FFE082;
+      border-left: 4px solid var(--warning);
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 0.83rem;
+      color: #5D4037;
+      margin-top: 12px;
+    }
+
+    .alert-box strong {
+      color: #3E2723;
+    }
+
+    /* BOTTOM NAVIGATION */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-around;
+      padding: 6px 8px calc(8px + env(safe-area-inset-bottom));
+      z-index: 60;
+      box-shadow: 0 -4px 20px rgba(20, 23, 38, 0.06);
+    }
+
+    .nav-btn {
+      flex: 1;
+      max-width: 140px;
+      background: none;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      padding: 6px 4px;
+      border-radius: 12px;
+      color: var(--text-muted);
+      font-size: 0.68rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s;
+      font-family: inherit;
+    }
+
+    .nav-btn .nav-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .nav-btn.active {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    /* STEP FOOTER NEXT/PREV */
+    .step-nav-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .btn-step-nav {
+      flex: 1;
+      padding: 13px 16px;
+      border-radius: 13px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-step-nav.primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* INSTALL MODAL */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 18, 34, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-sheet {
+      background: #fff;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 22px;
+      padding: 22px 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      animation: slideUp 0.25s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .modal-header h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .btn-close-modal {
+      background: #F0F2F8;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .os-card {
+      background: #F7F8FC;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .os-card h4 {
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .os-card ol {
+      padding-left: 18px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .os-card ol li {
+      margin-bottom: 5px;
+    }
+
+    .reset-btn {
+      background: none;
+      border: none;
+      color: var(--danger);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-top">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">🚲</div>
+        <div>
+          <div class="brand-title">Manual Bicicletas Decathlon</div>
+          <div class="brand-subtitle">Guía rápida de Venta, Bodega y Entrega</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-install" id="btnInstallApp" onclick="handleInstallClick()">
+          📲 Instalar en Celular
+        </button>
+      </div>
+    </div>
+
+    <!-- BUSCADOR INSTANTÁNEO -->
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input
+        type="search"
+        id="searchInput"
+        class="search-input"
+        placeholder="Buscar paso, Rockrider, talla, rin, Allen, Medallia..."
+        oninput="filterContent(this.value)"
+      >
+      <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- BARRA DE PROGRESO Y MODO VISTA -->
+    <div class="toolbar">
+      <div class="progress-info">
+        <span class="progress-ring" id="progressCounter">0 / 12 listos</span>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressBarFill"></div>
+        </div>
+      </div>
+      <button class="reset-btn" onclick="resetChecks()" title="Reiniciar lista para nuevo cliente">Reiniciar</button>
+      <button class="mode-toggle" id="btnViewAll" onclick="toggleViewAll()">
+        📖 Ver Todo
+      </button>
+    </div>
+
+    <!-- PÍLDORAS DE ACCESO RÁPIDO -->
+    <div class="quick-pills" id="quickPills">
+      <button class="pill active" onclick="goToStep(1)">1. Tipos & Marcas</button>
+      <button class="pill" onclick="goToStep(2)">2. Calculadora Tallas</button>
+      <button class="pill" onclick="goToStep(3)">3. Bajar de Bodega</button>
+      <button class="pill" onclick="goToStep(4)">4. Asesoría & Ajustes</button>
+      <button class="pill" onclick="goToStep(5)">5. Gana Medallia ⭐</button>
+    </div>
+
+    <!-- ==========================================
+         PASO 1: IDENTIFICA EL TIPO DE BICICLETA
+         ========================================== -->
+    <section class="step-section active" id="step-1" data-keywords="identifica tipo bicicleta venta cube montaña mtb rockrider ruta carretera van rysel urbanas hibridas elops riverside plegables tilt niños infantil">
+      <div class="section-banner">
+        <div class="step-badge">1</div>
+        <div>
+          <h2>Identifica el Tipo de Bicicleta</h2>
+          <p>Descubre qué quiere el cliente (apóyate en el <strong>CUBE</strong>) y ubica rápido cada línea y marca propia.</p>
+        </div>
+      </div>
+
+      <div class="bike-grid">
+        <div class="bike-card">
+          <div class="bike-head">
+            <div class="bike-icon">⛰️</div>
+            <span class="brand-tag">Rockrider</span>
+          </div>
+          <h3>Bicicletas de Montaña (MTB)</h3>
+          <p>Diseñadas para terrenos difíciles, trocha y travesías todoterreno.</p>
+          <div class="bike-question">💡 Ideal si el cliente busca aventura, tierra o montaña.</div>
+        </div>
+
+        <div class="bike-card">
+          <div class="bike-head">
+            <div class="bike-icon">🛣️</div>
+            <span class="brand-tag">Van Rysel</span>
+          </div>
+          <h3>Bicicletas de Ruta / Carretera</h3>
+          <p>Creadas para velocidad, aerodinámica y rendimiento en asfalto.</p>
+          <div class="bike-question">💡 Ideal para entrenar en pavimento y largas distancias.</div>
+        </div>
+
+        <div class="bike-card">
+          <div class="bike-head">
+            <div class="bike-icon">🏙️</div>
+            <span class="brand-tag">Elops / Riverside</span>
+          </div>
+          <h3>Urbanas e Híbridas</h3>
+          <p>Pensadas para el transporte diario, comodidad y movilidad en la ciudad o ciclorrutas.</p>
+          <div class="bike-question">💡 Ideal para ir al trabajo, universidad o paseos mixtos.</div>
+        </div>
+
+        <div class="bike-card">
+          <div class="bike-head">
+            <div class="bike-icon">🚈</div>
+            <span class="brand-tag">Línea Tilt</span>
+          </div>
+          <h3>Bicicletas Plegables</h3>
+          <p>Compactas y prácticas para facilitar su transporte en transporte público y almacenamiento en casa.</p>
+          <div class="bike-question">💡 Ideal si tiene poco espacio en apartamento o combina con bus/metro.</div>
+        </div>
+
+        <div class="bike-card">
+          <div class="bike-head">
+            <div class="bike-icon">🧒</div>
+            <span class="brand-tag">Por Tipo de Rin</span>
+          </div>
+          <h3>Bicicletas para Niños</h3>
+          <p>Se eligen según la estatura y etapa de aprendizaje del niño (Rin 12 a Rin 26).</p>
+          <div class="bike-question">💡 Pasa al Paso 2 para usar la guía de Rin Infantil.</div>
+        </div>
+      </div>
+
+      <div class="step-nav-footer">
+        <span></span>
+        <button class="btn-step-nav primary" onclick="goToStep(2)">Siguiente: Verificar Talla →</button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PASO 2: VERIFICAR LA TALLA DE LA BICICLETA
+         ========================================== -->
+    <section class="step-section" id="step-2" data-keywords="talla verificar estatura altura adulto niños infantil rin 12 14 16 20 24 26 small medium large xl">
+      <div class="section-banner">
+        <div class="step-badge">2</div>
+        <div>
+          <h2>Entrega · Paso 1: Verificar la Talla</h2>
+          <p>Selecciona si la bicicleta es para adulto o niño y desliza la estatura para ver la talla al instante.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="calc-tabs">
+          <button class="calc-tab active" id="tabAdult" onclick="switchSizeMode('adult')">🧑 Bicicletas Adultos</button>
+          <button class="calc-tab" id="tabKids" onclick="switchSizeMode('kids')">🧒 Bicicletas Infantiles (Rin)</button>
+        </div>
+
+        <!-- CALCULADORA ADULTOS -->
+        <div id="adultCalcBox">
+          <div class="slider-box">
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Estatura del cliente</div>
+            <div class="height-display" id="heightValueLabel">170 cm</div>
+            <input
+              type="range"
+              min="150"
+              max="200"
+              value="170"
+              class="height-range-input"
+              id="heightSlider"
+              oninput="updateAdultSize(this.value)"
+            >
+            <div>
+              <span class="size-result-badge" id="sizeResultBadge">Talla Orientativa: M (Medium)</span>
+            </div>
+          </div>
+
+          <table class="size-table" id="adultSizeTable">
+            <thead>
+              <tr>
+                <th>Estatura Aproximada</th>
+                <th>Talla Orientativa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-size="S">
+                <td>150 – 164 cm</td>
+                <td><strong>S</strong> (Small)</td>
+              </tr>
+              <tr data-size="M" class="highlighted">
+                <td>165 – 174 cm</td>
+                <td><strong>M</strong> (Medium)</td>
+              </tr>
+              <tr data-size="L">
+                <td>175 – 184 cm</td>
+                <td><strong>L</strong> (Large)</td>
+              </tr>
+              <tr data-size="XL">
+                <td>185 – 200 cm</td>
+                <td><strong>XL</strong> (Extra Large)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="alert-box">
+            ⚠️ <strong>Nota importante:</strong> Esta tabla sirve como referencia inicial para bicicletas MTB, pero <strong>no reemplaza la guía del modelo específico</strong>. Si está entre dos tallas, revisa siempre la geometría del modelo.
+          </div>
+        </div>
+
+        <!-- TABLA INFANTIL RIN -->
+        <div id="kidsCalcBox" style="display: none;">
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+            En bicicletas infantiles la talla se determina según el <strong>tamaño del rin</strong> y la etapa del niño:
+          </p>
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Tamaño Rin</th>
+                <th>Etapa / Usuario Recomendado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Rin 12"</strong></td>
+                <td>Para niños pequeños que están aprendiendo a montar.</td>
+              </tr>
+              <tr>
+                <td><strong>Rin 14"</strong></td>
+                <td>Para niños pequeños.</td>
+              </tr>
+              <tr>
+                <td><strong>Rin 16"</strong></td>
+                <td>Para niños en etapa de aprendizaje.</td>
+              </tr>
+              <tr>
+                <td><strong>Rin 20"</strong></td>
+                <td>Para niños que ya tienen mayor dominio de la bicicleta.</td>
+              </tr>
+              <tr>
+                <td><strong>Rin 24"</strong></td>
+                <td>Para niños más grandes o en transición a bicicletas de adulto.</td>
+              </tr>
+              <tr>
+                <td><strong>Rin 26"</strong></td>
+                <td>Para jóvenes o adultos, según la estatura y el modelo de la bicicleta.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="step-nav-footer">
+        <button class="btn-step-nav" onclick="goToStep(1)">← Tipos</button>
+        <button class="btn-step-nav primary" onclick="goToStep(3)">Siguiente: Bajar de Bodega →</button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PASO 3: BAJAR UNA BICICLETA DE LA BODEGA
+         ========================================== -->
+    <section class="step-section" id="step-3" data-keywords="bodega bajar bicicleta palanca gancho pecho asegurar procedimiento seguridad">
+      <div class="section-banner">
+        <div class="step-badge">3</div>
+        <div>
+          <h2>Entrega · Paso 2: Bajar Bicicleta de Bodega</h2>
+          <p>Si la bicicleta que desea el cliente está en bodega, marca cada paso de seguridad al realizarlo.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>Procedimiento de Bodega (5 pasos)</span>
+          <span style="font-size:0.75rem; color:var(--text-muted);">Toca para marcar ✓</span>
+        </div>
+
+        <div class="checklist">
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-1">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">1. Ubicar la bicicleta</div>
+              <div class="check-desc">Identifica con exactitud el modelo y talla que solicita el cliente.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-2">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">2. Sujetar la palanca</div>
+              <div class="check-desc">Toma la palanca que sobresale del sistema donde está almacenada la bicicleta.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-3">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">3. Bajar la bicicleta con cuidado</div>
+              <div class="check-desc">Tira de la palanca y <strong>empuja hacia tu pecho</strong>, realizando el movimiento con cuidado para evitar accidentes.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-4">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">4. Retirar la bicicleta del gancho</div>
+              <div class="check-desc">Una vez que hayas bajado la bicicleta, sácala del gancho que la sujeta.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="bod-5">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">5. Asegurar la bicicleta</div>
+              <div class="check-desc">Verifica que la bicicleta esté estable y sujétala firmemente antes de moverla.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-nav-footer">
+        <button class="btn-step-nav" onclick="goToStep(2)">← Tallas</button>
+        <button class="btn-step-nav primary" onclick="goToStep(4)">Siguiente: Asesoría y Ajustes →</button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PASO 4: ASESORÍA DECATHLONIANA Y AJUSTES
+         ========================================== -->
+    <section class="step-section" id="step-4" data-keywords="asesoria decathloniana atender cliente tienda ajustes llave allen manubrio inflar llantas bomba aire presion frase full">
+      <div class="section-banner">
+        <div class="step-badge">4</div>
+        <div>
+          <h2>Asesoría Decathloniana & Ajustes</h2>
+          <p>Pasos para atender al cliente en tienda y dejar la bicicleta 100% ajustada antes de entregarla.</p>
+        </div>
+      </div>
+
+      <!-- SUBSECCIÓN 4.1: ATENCIÓN AL CLIENTE -->
+      <div class="card">
+        <div class="card-title">
+          <span>1. ¿Cómo atender al cliente en tienda?</span>
+        </div>
+
+        <div class="checklist">
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-1">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">1. Pregunta para qué la necesita</div>
+              <div class="check-desc">Ej: <em>«¿La buscas para trocha, para hacer ejercicio o para transportarte por la ciudad?»</em></div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-2">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">2. Pregunta cuánto mide</div>
+              <div class="check-desc">Ej: <em>«¿Cuánto mides de estatura? Así puedo ayudarte a encontrar la talla adecuada»</em>.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-3">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">3. Identifica el tipo y el modelo</div>
+              <div class="check-desc">Determina si es MTB, Rockrider, ruta, urbana o gravel.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-4">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">4. Consulta la talla recomendada del modelo</div>
+              <div class="check-desc">Revisa la tabla del modelo; <strong>no asumas que todas las bicicletas talla M son iguales</strong>.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-5">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">5. Comprueba el ajuste con el cliente</div>
+              <div class="check-desc">Permite que pruebe la bicicleta de forma segura: que pueda montarse, bajarse y alcanzar los controles cómodamente.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="ase-6">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">6. Si está entre dos tallas, verifica antes de recomendar</div>
+              <div class="check-desc">Consulta la geometría y la guía de la marca (no siempre conviene elegir la más grande o la más pequeña).</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FRASE CLAVE -->
+        <div class="speech-card">
+          <div class="speech-label">
+            <span>💬 Frase que debes decirle al cliente (Con amabilidad y seguridad)</span>
+            <button class="btn-copy" onclick="copyText('Antes de entregártela, le haré unos ajustes para entregártela full.', this)">Copiar</button>
+          </div>
+          <div class="speech-text">“Antes de entregártela, le haré unos ajustes para entregártela full”.</div>
+        </div>
+      </div>
+
+      <!-- SUBSECCIÓN 4.2: REALIZAR LOS AJUSTES -->
+      <div class="card">
+        <div class="card-title">
+          <span>2. Realizar los ajustes de la bicicleta</span>
+        </div>
+
+        <div class="checklist">
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="aju-1">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">1. Solicitar ayuda al cliente</div>
+              <div class="check-desc">Pídele amablemente que te ayude a sujetar la bicicleta para mantenerla estable mientras realizas los ajustes.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="aju-2">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">2. Apretar el manubrio (Llave Allen)</div>
+              <div class="check-desc">Utiliza la <strong>llave Allen</strong> para apretar los tornillos de la parte superior del manubrio y asegurarte de que quede firme y bien alineado.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="aju-3">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">3. Inflar las llantas</div>
+              <div class="check-desc">Utiliza la bomba de aire para inflar las llantas según la presión recomendada para el modelo.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert-box">
+          🔧 <strong>Importante:</strong> Recuerda utilizar siempre la llave Allen para apretar los tornillos y verificar que el manubrio quede <strong>firme y bien alineado</strong> antes de entregar la bicicleta.
+        </div>
+      </div>
+
+      <div class="step-nav-footer">
+        <button class="btn-step-nav" onclick="goToStep(3)">← Bodega</button>
+        <button class="btn-step-nav primary" onclick="goToStep(5)">Siguiente: Gana Medallia ⭐ →</button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PASO 5: GANA MEDALLIA
+         ========================================== -->
+    <section class="step-section" id="step-5" data-keywords="gana medallia accesorios luces trasera roja blanca timbre detalle speech encuesta">
+      <div class="section-banner">
+        <div class="step-badge">5</div>
+        <div>
+          <h2>Gana Medallia ⭐ (Cierre de Oro)</h2>
+          <p>Ve más allá de la venta del producto, sorprende al cliente y recuérdale la encuesta de compra.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>¿El modelo elegido incluye accesorios?</span>
+        </div>
+
+        <div class="checklist">
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="med-1">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">Opción A: SÍ incluye accesorios de fábrica</div>
+              <div class="check-desc">Revisa en la información del modelo si incluye luces traseras (roja, blanca) o timbre. Comunícale al cliente que vas a colocarle sus accesorios y <strong>muéstrale cómo se utiliza cada uno</strong>.</div>
+            </div>
+          </div>
+
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="med-2">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">Opción B: NO incluye accesorios</div>
+              <div class="check-desc">Indícale que por su compra con nosotros le darás un detalle adicional (puede incluir una luz pequeña, roja o timbre).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="speech-card">
+          <div class="speech-label">
+            <span>🎁 Tu Speech Gana Medallia</span>
+            <button class="btn-copy" onclick="copyText('Dama/caballero, por su compra y tomar una muy buena elección, le daré un detalle que no está incluido en su compra.', this)">Copiar</button>
+          </div>
+          <div class="speech-text">“Dama/caballero, por su compra y tomar una muy buena elección, le daré un detalle que no está incluido en su compra”.</div>
+        </div>
+
+        <div class="checklist" style="margin-top: 12px;">
+          <div class="check-item" onclick="toggleCheck(this)" data-check-id="med-3">
+            <div class="check-box">✓</div>
+            <div class="check-content">
+              <div class="check-title">Paso Final: Recordar la encuesta de compra (Medallia)</div>
+              <div class="check-desc">Esto permite ir más allá de la venta y acoger al cliente. Por último, <strong>recuérdale colocar su opinión en la encuesta de compra</strong>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-nav-footer">
+        <button class="btn-step-nav" onclick="goToStep(4)">← Ajustes</button>
+        <button class="btn-step-nav primary" onclick="goToStep(1)">🔄 Volver al Inicio</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- NAVEGACIÓN INFERIOR FIJA PARA MÓVIL -->
+  <nav class="bottom-nav" aria-label="Navegación de pasos">
+    <button class="nav-btn active" onclick="goToStep(1)" data-nav="1">
+      <span class="nav-icon">🚲</span>
+      <span>1. Tipos</span>
+    </button>
+    <button class="nav-btn" onclick="goToStep(2)" data-nav="2">
+      <span class="nav-icon">📏</span>
+      <span>2. Tallas</span>
+    </button>
+    <button class="nav-btn" onclick="goToStep(3)" data-nav="3">
+      <span class="nav-icon">📦</span>
+      <span>3. Bodega</span>
+    </button>
+    <button class="nav-btn" onclick="goToStep(4)" data-nav="4">
+      <span class="nav-icon">🔧</span>
+      <span>4. Ajustes</span>
+    </button>
+    <button class="nav-btn" onclick="goToStep(5)" data-nav="5">
+      <span class="nav-icon">⭐</span>
+      <span>5. Medallia</span>
+    </button>
+  </nav>
+
+  <!-- MODAL DE INSTRUCCIONES PARA DESCARGAR EN TELÉFONO -->
+  <div class="modal-backdrop" id="installModal" onclick="if(event.target===this) closeInstallModal()">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <h3>📲 Tener Acceso Rápido en tu Celular</h3>
+        <button class="btn-close-modal" onclick="closeInstallModal()">✕</button>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">
+        Guarda este manual en la pantalla de inicio de tu teléfono para abrirlo en 1 toque como una App (incluso sin internet):
+      </p>
+
+      <div class="os-card">
+        <h4>🤖 En Android (Google Chrome)</h4>
+        <ol>
+          <li>Toca el botón de los <strong>3 puntos (⋮)</strong> arriba a la derecha en Chrome.</li>
+          <li>Selecciona <strong>"Instalar aplicación"</strong> o <strong>"Agregar a la pantalla principal"</strong>.</li>
+          <li>Confirma en <strong>Agregar</strong> y tendrás el ícono directo en tu teléfono.</li>
+        </ol>
+      </div>
+
+      <div class="os-card">
+        <h4>🍎 En iPhone (Safari)</h4>
+        <ol>
+          <li>Toca el botón <strong>Compartir (cuadro con flecha hacia arriba ⬆️)</strong> en la barra inferior de Safari.</li>
+          <li>Desliza hacia abajo y toca <strong>"Agregar a Inicio"</strong> (Add to Home Screen).</li>
+          <li>Toca <strong>Agregar</strong> arriba a la derecha.</li>
+        </ol>
+      </div>
+
+      <button class="btn-step-nav primary" style="width: 100%;" onclick="closeInstallModal()">¡Entendido!</button>
+    </div>
+  </div>
+
+  <script>
+    // ESTADO DE NAVEGACIÓN
+    let currentStep = 1;
+    let isViewAll = false;
+    let deferredPrompt = null;
+
+    function goToStep(stepNum) {
+      currentStep = stepNum;
+      if (isViewAll) {
+        const el = document.getElementById('step-' + stepNum);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        document.querySelectorAll('.step-section').forEach((sec, idx) => {
+          sec.classList.toggle('active', idx + 1 === stepNum);
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Actualizar botones activos
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.toggle('active', Number(btn.dataset.nav) === stepNum);
+      });
+      document.querySelectorAll('.quick-pills .pill').forEach((pill, idx) => {
+        pill.classList.toggle('active', idx + 1 === stepNum);
+      });
+    }
+
+    function toggleViewAll() {
+      isViewAll = !isViewAll;
+      document.body.classList.toggle('view-all', isViewAll);
+      const btn = document.getElementById('btnViewAll');
+      btn.classList.toggle('active', isViewAll);
+      btn.textContent = isViewAll ? '🎯 Modo Pasos' : '📖 Ver Todo';
+      if (!isViewAll) {
+        goToStep(currentStep);
+      }
+    }
+
+    // CALCULADORA DE TALLAS
+    function switchSizeMode(mode) {
+      document.getElementById('tabAdult').classList.toggle('active', mode === 'adult');
+      document.getElementById('tabKids').classList.toggle('active', mode === 'kids');
+      document.getElementById('adultCalcBox').style.display = mode === 'adult' ? 'block' : 'none';
+      document.getElementById('kidsCalcBox').style.display = mode === 'kids' ? 'block' : 'none';
+    }
+
+    function updateAdultSize(cm) {
+      const val = Number(cm);
+      document.getElementById('heightValueLabel').textContent = val + ' cm';
+      let size = 'S';
+      let label = 'S (Small)';
+      if (val >= 150 && val <= 164) {
+        size = 'S'; label = 'S (Small)';
+      } else if (val >= 165 && val <= 174) {
+        size = 'M'; label = 'M (Medium)';
+      } else if (val >= 175 && val <= 184) {
+        size = 'L'; label = 'L (Large)';
+      } else if (val >= 185) {
+        size = 'XL'; label = 'XL (Extra Large)';
+      }
+      document.getElementById('sizeResultBadge').textContent = 'Talla Orientativa: ' + label;
+
+      document.querySelectorAll('#adultSizeTable tbody tr').forEach(row => {
+        row.classList.toggle('highlighted', row.dataset.size === size);
+      });
+    }
+
+    // CHECKLIST INTERACTIVO CON GUARDADO LOCAL
+    function toggleCheck(el) {
+      el.classList.toggle('checked');
+      saveChecks();
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const allItems = document.querySelectorAll('.check-item');
+      const checkedItems = document.querySelectorAll('.check-item.checked');
+      const total = allItems.length;
+      const done = checkedItems.length;
+      document.getElementById('progressCounter').textContent = `${done} / ${total} listos`;
+      const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+      document.getElementById('progressBarFill').style.width = pct + '%';
+    }
+
+    function saveChecks() {
+      const checkedIds = [];
+      document.querySelectorAll('.check-item.checked').forEach(item => {
+        checkedIds.push(item.dataset.checkId);
+      });
+      try {
+        localStorage.setItem('decathlon_bici_checks', JSON.stringify(checkedIds));
+      } catch (e) {}
+    }
+
+    function loadChecks() {
+      try {
+        const saved = JSON.parse(localStorage.getItem('decathlon_bici_checks') || '[]');
+        document.querySelectorAll('.check-item').forEach(item => {
+          if (saved.includes(item.dataset.checkId)) {
+            item.classList.add('checked');
+          }
+        });
+      } catch (e) {}
+      updateProgress();
+    }
+
+    function resetChecks() {
+      document.querySelectorAll('.check-item.checked').forEach(item => {
+        item.classList.remove('checked');
+      });
+      try {
+        localStorage.removeItem('decathlon_bici_checks');
+      } catch (e) {}
+      updateProgress();
+    }
+
+    // COPIAR SPEECH
+    function copyText(text, btn) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text);
+      }
+      const old = btn.textContent;
+      btn.textContent = '¡Copiado!';
+      setTimeout(() => { btn.textContent = old; }, 1600);
+    }
+
+    // BUSCADOR INSTANTÁNEO
+    function filterContent(query) {
+      const q = query.trim().toLowerCase();
+      const clearBtn = document.getElementById('searchClear');
+      clearBtn.style.display = q.length > 0 ? 'inline-flex' : 'none';
+
+      if (!q) {
+        if (!isViewAll) {
+          goToStep(currentStep);
+        } else {
+          document.querySelectorAll('.step-section').forEach(sec => sec.style.display = 'block');
+        }
+        return;
+      }
+
+      // Al buscar, mostramos todas las secciones que coincidan
+      document.querySelectorAll('.step-section').forEach(sec => {
+        const text = (sec.innerText + ' ' + (sec.dataset.keywords || '')).toLowerCase();
+        sec.style.display = text.includes(q) ? 'block' : 'none';
+      });
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      filterContent('');
+      document.querySelectorAll('.step-section').forEach(sec => sec.style.display = '');
+      if (!isViewAll) goToStep(currentStep);
+    }
+
+    // INSTALACIÓN PWA (ANDROID CHROME + IPHONE SAFARI)
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+
+    function handleInstallClick() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.finally(() => {
+          deferredPrompt = null;
+        });
+      } else {
+        document.getElementById('installModal').classList.add('open');
+      }
+    }
+
+    function closeInstallModal() {
+      document.getElementById('installModal').classList.remove('open');
+    }
+
+    // REGISTRO DE SERVICE WORKER PARA ACCESO OFFLINE
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw-bicis.js').catch(() => {});
+      });
+    }
+
+    // INICIALIZAR
+    loadChecks();
+  </script>
+</body>
+</html>
