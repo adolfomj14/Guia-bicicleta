@@ -1,7 +1,15 @@
-const CACHE_NAME = 'decathlon-bicis-v1';
+const CACHE_NAME = 'decathlon-bicis-v2';
 const ASSETS = [
   './guia_bicicletas.html',
-  './manifest-bicis.json'
+  './index.html',
+  './manifest-bicis.json',
+  './img/mtb.jpg',
+  './img/ruta.jpg',
+  './img/urbana.jpg',
+  './img/plegable.jpg',
+  './img/ninos.jpg',
+  './img/allen.jpg',
+  './img/bomba.jpg'
 ];
 
 self.addEventListener('install', (event) => {
